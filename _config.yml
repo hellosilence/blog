@@ -1,0 +1,47 @@
+# Site settings
+title: Samuel's Blog
+header-img: img/home-bg.jpg
+email: xuzhou@gmail.com
+description: "You are reading my blog "
+baseurl: ""
+url: "http://hellosilence.github.io"
+
+# SNS settings
+RSS: false
+
+github_username:  hellosilence
+facebook_username:  enjoycode
+weibo_username: enjoycodeme
+zhihu_username: hellosilence
+
+# Build settings
+highlighter: pygments
+permalink: pretty
+paginate: 10
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+
+# Markdown settings
+# redcarpet can auto highlight code, but the lack of header-id make the catalog impossible, so I switch to kramdown
+# markdown: kramdown
+
+# document: http://jekyllrb.com/docs/configuration/#kramdown
+# use Github Flavored Markdown !important
+# kramdown:
+#   input: GFM
+
+markdown: redcarpet
+markdown_ext:  markdown,mkdown,mkdn,mkd,md
+redcarpet:
+  extensions: ["tables", "autolink", "strikethrough", "space_after_headers", "fenced_code_blocks","with_toc_data"]
+
+# Duoshuo settings
+# Please set your own DuoShuo account.
+useDuoshuo: true    # Comment and Share
+#useShare: true      # use Comment only. seeing the Share component is depend on Comment so we can NOT use share only.
+
+
+# Todo: Analysis settings
+# Please set your own analysis account
+#useBaiduAnalysis: true
+useTencentAnalysis: true
+useGoogleAnalysis: true

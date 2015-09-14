@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    {% include nav.html %}
+
+    {{ content }}
+
+    {% include footer.html %}
+
+
+<!-- Image to hack wechat -->
+<img src="/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=43623438" charset="UTF-8"></script>
+
+<!-- <script src="/js/jquery.min.js" type="text/javascript"></script> -->
+<!-- <script src="/js/toc.js" type="text/javascript"></script> -->
+<!-- http://t.hengwei.me/post/%E4%B8%BAjekyll%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E7%9B%AE%E5%BD%95%E4%B8%8Escrollspy%E6%95%88%E6%9E%9C/#1-目录生成插件选择 -->
+</body>
+
+</html>
