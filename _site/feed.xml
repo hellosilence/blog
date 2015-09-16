@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Samuel&#39;s Blog</title>
+    <description>You are reading my blog </description>
+    <link>http://hellosilence.github.io/</link>
+    <atom:link href="http://hellosilence.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Wed, 16 Sep 2015 15:48:43 +0800</pubDate>
+    <lastBuildDate>Wed, 16 Sep 2015 15:48:43 +0800</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>总有相见恨晚的朋友——认识 markdown</title>
+        <description>&lt;h1 id=&quot;目录&quot;&gt;目录&lt;/h1&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;#%E5%89%8D%E8%A8%80&quot;&gt;前言&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;#%E7%BC%96%E8%BE%91%E5%99%A8%E5%88%9D%E4%BD%93%E9%AA%8C&quot;&gt;编辑器初体验&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;#%E8%AF%AD%E6%B3%95&quot;&gt;语法&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;​&lt;/p&gt;
+
+&lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
+
+&lt;p&gt;总会有相见恨晚的时候，markdown 就给了我这种感觉。&lt;/p&gt;
+
+&lt;p&gt;了解 markdown 之后，才发现文字能够以如此简单的方式变得优雅。对写作者和设计者来说，对文字排版有更高的要求；但对于一般人，markdown 足以满足需要了。而且markdown 还有程序员喜欢的代码高亮功能。&lt;/p&gt;
+
+&lt;p&gt;因此，掌握了 markdown 的语法后，我就开始寻找一款得心应手的工具。不过很遗憾，目前完全满足我要求的 markdown 编辑器还没有发现。仅就我体验过的编辑器来说，Typora 和 Alternote 是其中的佼佼者。&lt;/p&gt;
+
+&lt;h2 id=&quot;编辑器初体验&quot;&gt;编辑器初体验&lt;/h2&gt;
+
+&lt;p&gt;我使用软件的习惯是，在正式使用之前，体验所有类似功能的软件，寻找最好/适合的软件，然后一直用下去（当然，需求增加导致更换软件也挺正常的），markdown 也一样。我理想中的 markdown 编辑器应该是这样的：&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;markdown 语法支持&lt;/li&gt;
+&lt;li&gt;界面美观，操作简便&lt;/li&gt;
+&lt;li&gt;有文档管理功能&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;怀着这样的期许，开始了漫漫寻觅之路。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Mou/MacDown：Mou 其实挺不错的，不少人在用，但是没有代码高亮功能。原作者已经出售了该软件，目前1.0正式版还没有完全发售。MacDown 的作者参考了 Mou 的设计，也有代码高亮功能。但是和 Mou 一样没有文档管理功能。&lt;/li&gt;
+&lt;li&gt;作业部落：体验过一段时间，功能很丰富，但是没有我想要的。（弱水三千，只取一瓢呀）。它的文档管理不直观，而且很依赖网络。虽然已经出了客户端，但是功能很简陋。此外，所有在线类的编辑器有一个潜在的缺点是：数据安全。个人或者小团队写的软件，可能会因为各种原因导致软件挂了。即使是大公司的产品也不一定非常可靠，比如Google Code. 所以要么文件存储在本地，要么有可靠的云服务。&lt;/li&gt;
+&lt;li&gt;马克飞象：前面说到数据安全。马克飞象就是专门为印象笔记打造的编辑器。缺点在于文件或者图片稍多，软件会卡顿，同步很慢。&lt;/li&gt;
+&lt;li&gt;Alternote：也是和印象笔记同步的软件。文档管理就是我想要的，而且界面美观！如果markdown 支持得更完善就好了。官网说后续版本会支持，期待中。  &lt;/li&gt;
+&lt;li&gt;Typora：我现在用的 markdown 编辑器，特点是所见所得，而不是一般编辑器的两栏设计（编辑和预览）。还有就是美观，自从使用了 Mac 后，美观的重要性排到第一了（和实用性并列）。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;所以，目前电脑上的 markdown 编辑器有三个：Typora，Alternote，MacDown.&lt;/p&gt;
+
+&lt;p&gt;接下来测试一下 redcarpet 显示效果。&lt;/p&gt;
+
+&lt;h2 id=&quot;语法&quot;&gt;语法&lt;/h2&gt;
+
+&lt;h3 id=&quot;标题一&quot;&gt;标题一&lt;/h3&gt;
+
+&lt;h4 id=&quot;标题二&quot;&gt;标题二&lt;/h4&gt;
+
+&lt;h5 id=&quot;标题三&quot;&gt;标题三&lt;/h5&gt;
+
+&lt;h3 id=&quot;加粗和倾斜&quot;&gt;加粗和倾斜&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;加粗&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;倾斜&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;无序列表&quot;&gt;无序列表&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;苹果&lt;/li&gt;
+&lt;li&gt;香蕉&lt;/li&gt;
+&lt;li&gt;橙子&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;有序列表&quot;&gt;有序列表&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;第一个&lt;/li&gt;
+&lt;li&gt;第二个&lt;/li&gt;
+&lt;li&gt;第三个&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;代码块&quot;&gt;代码块&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;IPDemo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;UnknownHostException&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;InetAddress&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;address&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InetAddress&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getLocalHost&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;address &amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getHostAddress&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;name &amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getHostName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;InetAddress&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;address1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InetAddress&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getByName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;www.baidu.com&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;address &amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;address1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getHostAddress&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;name &amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;address1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getHostName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+
+        &lt;span class=&quot;n&quot;&gt;InetAddress&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;address2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;InetAddress&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getAllByName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;www.baidu.com&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;address2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;address &amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;address2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getHostAddress&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+
+            &lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;name &amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot; &amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;address2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getHostName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;行内代码块&quot;&gt;行内代码块&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;html&lt;/code&gt; &lt;code&gt;markdown&lt;/code&gt; &lt;code&gt;我是行内代码块&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;表格&quot;&gt;表格&lt;/h3&gt;
+
+&lt;table&gt;&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Tables&lt;/th&gt;
+&lt;th style=&quot;text-align: center&quot;&gt;Are&lt;/th&gt;
+&lt;th style=&quot;text-align: right&quot;&gt;Cool&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;col 3 is&lt;/td&gt;
+&lt;td style=&quot;text-align: center&quot;&gt;right-aligned&lt;/td&gt;
+&lt;td style=&quot;text-align: right&quot;&gt;$1600&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;col 2 is&lt;/td&gt;
+&lt;td style=&quot;text-align: center&quot;&gt;centered&lt;/td&gt;
+&lt;td style=&quot;text-align: right&quot;&gt;$12&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;zebra stripes&lt;/td&gt;
+&lt;td style=&quot;text-align: center&quot;&gt;are neat&lt;/td&gt;
+&lt;td style=&quot;text-align: right&quot;&gt;$1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;h3 id=&quot;引用&quot;&gt;引用&lt;/h3&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;床前明月光&lt;/p&gt;
+
+&lt;p&gt;疑似地上霜&lt;/p&gt;
+
+&lt;p&gt;举头望明月&lt;/p&gt;
+
+&lt;p&gt;低头思故乡&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;链接&quot;&gt;链接&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.google.com&quot;&gt;Google&lt;/a&gt; &lt;/p&gt;
+
+&lt;h3 id=&quot;插入图片&quot;&gt;插入图片&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;#&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/eagle.jpg&quot; alt=&quot;Post Sample Image&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 16 Sep 2015 20:00:00 +0800</pubDate>
+        <link>http://hellosilence.github.io/2015/09/16/markdown-test/</link>
+        <guid isPermaLink="true">http://hellosilence.github.io/2015/09/16/markdown-test/</guid>
+        
+        <category>markdown</category>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
