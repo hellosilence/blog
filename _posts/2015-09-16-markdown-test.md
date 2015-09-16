@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "是时候认识一位新朋友了————结缘 markdown"
+title:      "是时候认识一位新朋友了——结缘 markdown"
 subtitle:   "Typora体验"
 date:       2015-09-16 12:00:00
 author:     "Samuel"
@@ -10,7 +10,13 @@ tags:
 
 # 目录
 
-[TOC]
+1. [前言](#前言)
+   
+2. [编辑器出体验](#编辑器初体验)
+   
+3. [Markdown 语法](#Markdown 语法)
+   
+   ​
 
 ## 前言
 
@@ -123,6 +129,7 @@ public class IPDemo {
 ### 插入图片
 
 <a href="#">
-<img src="{{ site.baseurl }}/img/eagle.jpg" alt="Post Sample Image">
-</a>
 
+<img src="{{ site.baseurl }}/img/eagle.jpg" alt="Post Sample Image">
+
+</a>
