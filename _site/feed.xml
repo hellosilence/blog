@@ -5,8 +5,8 @@
     <description>You are reading my blog </description>
     <link>http://hellosilence.github.io/</link>
     <atom:link href="http://hellosilence.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 22 Sep 2015 20:26:24 +0800</pubDate>
-    <lastBuildDate>Tue, 22 Sep 2015 20:26:24 +0800</lastBuildDate>
+    <pubDate>Sat, 26 Sep 2015 17:49:40 +0800</pubDate>
+    <lastBuildDate>Sat, 26 Sep 2015 17:49:40 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -27,7 +27,7 @@
 
 &lt;p&gt;了解 markdown 之后，才发现文字能够以如此简单的方式变得优雅。对写作者和设计者来说，对文字排版有更高的要求；但对于一般人，markdown 足以满足需要了。而且markdown 还有程序员喜欢的代码高亮功能。&lt;/p&gt;
 
-&lt;p&gt;因此，掌握了 markdown 的语法后，我就开始寻找一款得心应手的工具。不过很遗憾，目前完全满足我要求的 markdown 编辑器还没有发现。仅就我体验过的编辑器来说，Typora 和 Alternote 是其中的佼佼者。&lt;/p&gt;
+&lt;p&gt;因此，掌握了 markdown 的语法后，我就开始寻找一款得心应手的工具。&lt;/p&gt;
 
 &lt;h2 id=&quot;编辑器初体验&quot;&gt;编辑器初体验&lt;/h2&gt;
 
@@ -47,11 +47,12 @@
 &lt;li&gt;马克飞象：前面说到数据安全。马克飞象就是专门为印象笔记打造的编辑器。缺点在于文件或者图片稍多，软件会卡顿，同步很慢。&lt;/li&gt;
 &lt;li&gt;Alternote：也是和印象笔记同步的软件。文档管理就是我想要的，而且界面美观！如果markdown 支持得更完善就好了。官网说后续版本会支持，期待中。  &lt;/li&gt;
 &lt;li&gt;Typora：我现在用的 markdown 编辑器，特点是所见所得，而不是一般编辑器的两栏设计（编辑和预览）。还有就是美观，自从使用了 Mac 后，美观的重要性排到第一了（和实用性并列）。&lt;/li&gt;
+&lt;li&gt;Marboo：五星推荐！之前一直在找带有文档管理功能的 markdown 编辑器，可是一直没有找到好用的，直到前几天在 Mac App Store 找到了 marboo. 这款软件分为普通版和 pro 版，普通版免费，完全能满足需要。marboo 没有编辑器的功能，编辑时会调用系统安装的编辑器。它主要就是用来管理和显示 markdown 文件，显示效果就是本文的显示效果。配合 dropbox 的使用，简直完美！一开始使用起来有点问题，加了QQ群直接询问作者了。总之，推荐你去试试。&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;所以，目前电脑上的 markdown 编辑器有三个：Typora，Alternote，MacDown.&lt;/p&gt;
+&lt;p&gt;综上，最后留在我电脑里的软件是：Typora 和 Marboo&lt;/p&gt;
 
-&lt;p&gt;接下来测试一下 redcarpet 显示效果。&lt;/p&gt;
+&lt;p&gt;接下来测试一下 markdown 显示效果。&lt;/p&gt;
 
 &lt;h2 id=&quot;语法&quot;&gt;语法&lt;/h2&gt;
 
@@ -70,9 +71,9 @@
 &lt;h3 id=&quot;无序列表&quot;&gt;无序列表&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;苹果&lt;/li&gt;
-&lt;li&gt;香蕉&lt;/li&gt;
-&lt;li&gt;橙子&lt;/li&gt;
+&lt;li&gt; 苹果&lt;/li&gt;
+&lt;li&gt; 香蕉&lt;/li&gt;
+&lt;li&gt; 橙子&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;有序列表&quot;&gt;有序列表&lt;/h3&gt;
