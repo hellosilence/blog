@@ -5,9 +5,285 @@
     <description>You are reading my blog </description>
     <link>http://hellosilence.github.io/</link>
     <atom:link href="http://hellosilence.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 26 Sep 2015 17:49:40 +0800</pubDate>
-    <lastBuildDate>Sat, 26 Sep 2015 17:49:40 +0800</lastBuildDate>
+    <pubDate>Mon, 26 Oct 2015 22:56:53 +0800</pubDate>
+    <lastBuildDate>Mon, 26 Oct 2015 22:56:53 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Android 代码命名规范</title>
+        <description>&lt;h2 id=&quot;命名方法&quot;&gt;命名方法&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;大驼峰式命名法&lt;/p&gt;
+
+&lt;p&gt;每个单词的第一个字母都大写&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;小驼峰式命名法&lt;/p&gt;
+
+&lt;p&gt;除了第一个单词，每个单词的第一个字母都大写&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;下划线命名法&lt;/p&gt;
+
+&lt;p&gt;单词与单词间用下划线做间隔&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;匈牙利命名法&lt;/p&gt;
+
+&lt;p&gt;基本原则是：变量名=属性+类型+对象描述&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;android-命名规范&quot;&gt;Android 命名规范&lt;/h2&gt;
+
+&lt;h3 id=&quot;包命名规范&quot;&gt;包命名规范&lt;/h3&gt;
+
+&lt;p&gt;采用&lt;strong&gt;反域名命名规则&lt;/strong&gt;，包名全部小写，连续的单词只是简单地连接起来，不使用下划线，一级包名为com，二级包名为xxx（可以是公司域名或者个人命名），三级包名根据应用进行命名，四级包名为模块名或层级名。如：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;com.isa.crm.activity&lt;/code&gt;, &lt;code&gt;com.isa.crm.adapter&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;java类命名规范&quot;&gt;JAVA类命名规范&lt;/h3&gt;
+
+&lt;p&gt;采用&lt;strong&gt;大驼峰式命名法&lt;/strong&gt;，尽量避免缩写，除非该缩写是众所周知的，比如HTML，URL,如果类名称包含单词缩写，则单词缩写的每个字母均应大写。如：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;ProductListActivity&lt;/code&gt;，&lt;code&gt;ProductListAdapter&lt;/code&gt;，&lt;code&gt;JsonHTTPSRequest&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;接口命名规范&quot;&gt;接口命名规范&lt;/h3&gt;
+
+&lt;p&gt;命名规则与类一样采用&lt;strong&gt;大驼峰命名法&lt;/strong&gt;，多以&lt;code&gt;able&lt;/code&gt;或&lt;code&gt;ible&lt;/code&gt;结尾。例如：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;interface Runable&lt;/code&gt;，&lt;code&gt;interface Accessible&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;成员变量命名规范&quot;&gt;成员变量命名规范&lt;/h3&gt;
+
+&lt;p&gt;采用&lt;strong&gt;小驼峰命名法&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;临时变量命名&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;使用标准的Java命名方法，不推荐使用Google的m命名法。例如：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;private String userName&lt;/code&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;常量命名&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;常量使用全大写字母加下划线的方式命名，例如：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;public static final String TAG = &amp;quot;tag”;&lt;/code&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;控件实例命名&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;不少文章说，类中控件名称必须与xml布局id保持一致，个人对这条存疑，我是这么做的：&lt;/p&gt;
+
+&lt;p&gt;布局文件中Button的id为&lt;code&gt;android:id=&amp;quot;@+id/btn_pay_main”&lt;/code&gt;(main是xml文件对应的Activity或其他）&lt;/p&gt;
+
+&lt;p&gt;类中的对象名称则为&lt;code&gt;private Button btnPayMain&lt;/code&gt;,这是Android Studio中的&lt;code&gt;Android Layout ID Converter&lt;/code&gt;插件自动生成的。&lt;/p&gt;
+
+&lt;h3 id=&quot;方法命名规范&quot;&gt;方法命名规范&lt;/h3&gt;
+
+&lt;p&gt;动词或动名词，采用小驼峰命名法。例如:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;run()&lt;/code&gt;,&lt;code&gt;onCreate()&lt;/code&gt;,&lt;code&gt;syncProducts()&lt;/code&gt;&lt;/p&gt;
+
+&lt;table&gt;&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;方法&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;initXX()&lt;/td&gt;
+&lt;td&gt;初始化相关方法,使用init为前缀标识，如初始化布局initView()&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;isXX()&lt;/td&gt;
+&lt;td&gt;checkXX()方法返回值为boolean型的请使用is或check为前缀标识&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;getXX()&lt;/td&gt;
+&lt;td&gt;返回某个值的方法，使用get为前缀标识&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;processXX()&lt;/td&gt;
+&lt;td&gt;对数据进行处理的方法，尽量使用process为前缀标识&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;displayXX()&lt;/td&gt;
+&lt;td&gt;弹出提示框和提示信息，使用display为前缀标识&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;saveXX()&lt;/td&gt;
+&lt;td&gt;与保存数据相关的，使用save前缀标识&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;resetXX()&lt;/td&gt;
+&lt;td&gt;对数据重组的，使用reset前缀标识&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;clearXX()&lt;/td&gt;
+&lt;td&gt;清除数据相关的&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;removeXXX()&lt;/td&gt;
+&lt;td&gt;清除数据相关的&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;drawXXX()&lt;/td&gt;
+&lt;td&gt;绘制数据或效果相关的，使用draw前缀标识&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;h3 id=&quot;布局文件（layout）命名规范&quot;&gt;布局文件（&lt;code&gt;layout&lt;/code&gt;）命名规范&lt;/h3&gt;
+
+&lt;p&gt;全部小写，采用下划线命名法。&lt;/p&gt;
+
+&lt;p&gt;activity layout：&lt;code&gt;activity_main&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;fragment layout: &lt;code&gt;fragment_shopping&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Dialog layout: &lt;code&gt;dialog_loading&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;资源-id-命名规范&quot;&gt;资源 ID 命名规范&lt;/h3&gt;
+
+&lt;p&gt;（个人习惯）命名模式为：&lt;code&gt;{view_name}_{view 描述}_{xml关联的 Activity}&lt;/code&gt;，例如：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;btn_send_main&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;常见控件View与其缩写对照参考表如下:&lt;/p&gt;
+
+&lt;table&gt;&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;控件&lt;/th&gt;
+&lt;th&gt;缩写&lt;/th&gt;
+&lt;th&gt;控件&lt;/th&gt;
+&lt;th&gt;缩写&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;LinearLayout&lt;/td&gt;
+&lt;td&gt;ll&lt;/td&gt;
+&lt;td&gt;DatePicker&lt;/td&gt;
+&lt;td&gt;dtPk&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;RelativeLayout&lt;/td&gt;
+&lt;td&gt;rl&lt;/td&gt;
+&lt;td&gt;EditText&lt;/td&gt;
+&lt;td&gt;edt&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;TextView&lt;/td&gt;
+&lt;td&gt;tv&lt;/td&gt;
+&lt;td&gt;TimePicker&lt;/td&gt;
+&lt;td&gt;tmPk&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Button&lt;/td&gt;
+&lt;td&gt;btn&lt;/td&gt;
+&lt;td&gt;ProgressBar&lt;/td&gt;
+&lt;td&gt;proBar&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ImageButton&lt;/td&gt;
+&lt;td&gt;imgBtn&lt;/td&gt;
+&lt;td&gt;WdbView&lt;/td&gt;
+&lt;td&gt;wv&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ImageView&lt;/td&gt;
+&lt;td&gt;iv&lt;/td&gt;
+&lt;td&gt;Spinner&lt;/td&gt;
+&lt;td&gt;spn&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;CheckBox&lt;/td&gt;
+&lt;td&gt;cbx&lt;/td&gt;
+&lt;td&gt;ScollView&lt;/td&gt;
+&lt;td&gt;sv&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;RadioButton&lt;/td&gt;
+&lt;td&gt;rBtn&lt;/td&gt;
+&lt;td&gt;ListView&lt;/td&gt;
+&lt;td&gt;lv&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;h3 id=&quot;图片资源文件命名&quot;&gt;图片资源文件命名&lt;/h3&gt;
+
+&lt;table&gt;&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;命名&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;bg_xxx&lt;/td&gt;
+&lt;td&gt;这种图片一般那些比较大的图片，比如作为某个Activity的背景等&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;btn_xxx&lt;/td&gt;
+&lt;td&gt;按钮，一般用于按钮，而且这种按钮没有其他状态&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ic_xxx&lt;/td&gt;
+&lt;td&gt;图标，一般用于单个图标，比如启动图片ic_launcher&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;bg_描述_状态&lt;/td&gt;
+&lt;td&gt;用于控件上的不同状态&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;btn_描述_状态&lt;/td&gt;
+&lt;td&gt;用于按钮上的不同状态，比如normal，press&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;chx_描述_状态&lt;/td&gt;
+&lt;td&gt;选择框&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;h2 id=&quot;代码风格&quot;&gt;代码风格&lt;/h2&gt;
+
+&lt;h3 id=&quot;大括号风格&quot;&gt;大括号风格&lt;/h3&gt;
+
+&lt;p&gt;行尾和换行（IDE 一般都有代码自动格式化，可以自己修改）&lt;/p&gt;
+
+&lt;h3 id=&quot;空格&quot;&gt;空格&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;if else&lt;/code&gt;，&lt;code&gt;while&lt;/code&gt;,&lt;code&gt;运算符&lt;/code&gt;等后面需用空格隔开&lt;/p&gt;
+
+&lt;h3 id=&quot;方法参数&quot;&gt;方法参数&lt;/h3&gt;
+
+&lt;p&gt;当方法参数数量过多时，需进行换行处理&lt;/p&gt;
+
+&lt;h3 id=&quot;注释&quot;&gt;注释&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;必须要对所有实例变量、类常量进行注释说明&lt;/li&gt;
+&lt;li&gt;必须对所有的类、接口进行注释说明&lt;/li&gt;
+&lt;li&gt;必须对所有的方法进行注释说明&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;本文参考自：&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.androidchina.net/2141.html&quot;&gt;最佳实践之Android代码规范&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/vipzjyno1/article/details/23542617&quot;&gt;Android 命名规范 （提高代码可以读性）&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;​&lt;/p&gt;
+</description>
+        <pubDate>Sat, 03 Oct 2015 20:00:00 +0800</pubDate>
+        <link>http://hellosilence.github.io/2015/10/03/android-code-guideline/</link>
+        <guid isPermaLink="true">http://hellosilence.github.io/2015/10/03/android-code-guideline/</guid>
+        
+        <category>Android</category>
+        
+        <category>学习笔记</category>
+        
+        
+      </item>
     
       <item>
         <title>总有相见恨晚的朋友——认识 markdown</title>
