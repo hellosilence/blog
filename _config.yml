@@ -15,7 +15,7 @@ weibo_username: enjoycodeme
 zhihu_username: hellosilence
 
 # Build settings
-highlighter: pygments
+highlighter: rouge
 permalink: pretty
 paginate: 10
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
@@ -29,9 +29,9 @@ exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 # kramdown:
 #   input: GFM
 
-markdown: redcarpet
+markdown: kramdown
 markdown_ext:  markdown,mkdown,mkdn,mkd,md
-redcarpet:
+kramdown:
   extensions: ["tables", "autolink", "strikethrough", "space_after_headers", "fenced_code_blocks","with_toc_data"]
 
 # Duoshuo settings
