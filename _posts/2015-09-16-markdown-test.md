@@ -81,7 +81,6 @@ tags:
 ### 代码块
 
 ``` java
-
 public class IPDemo {
     public static void main(String[] args) throws UnknownHostException {
         InetAddress address = InetAddress.getLocalHost();
@@ -132,8 +131,5 @@ public class IPDemo {
 
 ### 插入图片
 
-<a href="#">
-
 <img src="{{ site.baseurl }}/img/eagle.jpg" alt="Post Sample Image">
 
-</a>
