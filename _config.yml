@@ -26,13 +26,12 @@ exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 
 # document: http://jekyllrb.com/docs/configuration/#kramdown
 # use Github Flavored Markdown !important
-# kramdown:
-#   input: GFM
-
+highlighter: rouge
 markdown: kramdown
-markdown_ext:  markdown,mkdown,mkdn,mkd,md
 kramdown:
-  extensions: ["tables", "autolink", "strikethrough", "space_after_headers", "fenced_code_blocks","with_toc_data"]
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
 
 # Duoshuo settings
 # Please set your own DuoShuo account.

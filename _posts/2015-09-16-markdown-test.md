@@ -80,7 +80,7 @@ tags:
 
 ### 代码块
 
-~~~ Java
+``` Java
 public class IPDemo {
     public static void main(String[] args) throws UnknownHostException {
         InetAddress address = InetAddress.getLocalHost();
@@ -101,7 +101,7 @@ public class IPDemo {
 
     }
 }
-~~~
+```
 
 ### 行内代码块
 
