@@ -183,19 +183,19 @@
 
 <p>采用<strong>反域名命名规则</strong>，包名全部小写，连续的单词只是简单地连接起来，不使用下划线，一级包名为com，二级包名为xxx（可以是公司域名或者个人命名），三级包名根据应用进行命名，四级包名为模块名或层级名。如：</p>
 
-<p><code>com.isa.crm.activity</code>, <code>com.isa.crm.adapter</code></p>
+<p><code class="highlighter-rouge">com.isa.crm.activity</code>, <code class="highlighter-rouge">com.isa.crm.adapter</code></p>
 
 <h3 id="java">JAVA类命名规范</h3>
 
 <p>采用<strong>大驼峰式命名法</strong>，尽量避免缩写，除非该缩写是众所周知的，比如HTML，URL,如果类名称包含单词缩写，则单词缩写的每个字母均应大写。如：</p>
 
-<p><code>ProductListActivity</code>，<code>ProductListAdapter</code>，<code>JsonHTTPSRequest</code></p>
+<p><code class="highlighter-rouge">ProductListActivity</code>，<code class="highlighter-rouge">ProductListAdapter</code>，<code class="highlighter-rouge">JsonHTTPSRequest</code></p>
 
 <h3 id="section-2">接口命名规范</h3>
 
-<p>命名规则与类一样采用<strong>大驼峰命名法</strong>，多以<code>able</code>或<code>ible</code>结尾。例如：</p>
+<p>命名规则与类一样采用<strong>大驼峰命名法</strong>，多以<code class="highlighter-rouge">able</code>或<code class="highlighter-rouge">ible</code>结尾。例如：</p>
 
-<p><code>interface Runable</code>，<code>interface Accessible</code></p>
+<p><code class="highlighter-rouge">interface Runable</code>，<code class="highlighter-rouge">interface Accessible</code></p>
 
 <h3 id="section-3">成员变量命名规范</h3>
 
@@ -207,23 +207,23 @@
 
     <p>使用标准的Java命名方法，不推荐使用Google的m命名法。例如：</p>
 
-    <p><code>private String userName</code></p>
+    <p><code class="highlighter-rouge">private String userName</code></p>
   </li>
   <li>
     <p>常量命名</p>
 
     <p>常量使用全大写字母加下划线的方式命名，例如：</p>
 
-    <p><code>public static final String TAG = "tag”;</code></p>
+    <p><code class="highlighter-rouge">public static final String TAG = "tag”;</code></p>
   </li>
   <li>
     <p>控件实例命名</p>
 
     <p>不少文章说，类中控件名称必须与xml布局id保持一致，个人对这条存疑，我是这么做的：</p>
 
-    <p>布局文件中Button的id为<code>android:id="@+id/btn_pay_main”</code>(main是xml文件对应的Activity或其他）</p>
+    <p>布局文件中Button的id为<code class="highlighter-rouge">android:id="@+id/btn_pay_main”</code>(main是xml文件对应的Activity或其他）</p>
 
-    <p>类中的对象名称则为<code>private Button btnPayMain</code>,这是Android Studio中的<code>Android Layout ID Converter</code>插件自动生成的。</p>
+    <p>类中的对象名称则为<code class="highlighter-rouge">private Button btnPayMain</code>,这是Android Studio中的<code class="highlighter-rouge">Android Layout ID Converter</code>插件自动生成的。</p>
   </li>
 </ol>
 
@@ -231,7 +231,7 @@
 
 <p>动词或动名词，采用小驼峰命名法。例如:</p>
 
-<p><code>run()</code>,<code>onCreate()</code>,<code>syncProducts()</code></p>
+<p><code class="highlighter-rouge">run()</code>,<code class="highlighter-rouge">onCreate()</code>,<code class="highlighter-rouge">syncProducts()</code></p>
 
 <table>
   <thead>
@@ -284,21 +284,21 @@
   </tbody>
 </table>
 
-<h3 id="layout">布局文件（<code>layout</code>）命名规范</h3>
+<h3 id="layout">布局文件（<code class="highlighter-rouge">layout</code>）命名规范</h3>
 
 <p>全部小写，采用下划线命名法。</p>
 
-<p>activity layout：<code>activity_main</code></p>
+<p>activity layout：<code class="highlighter-rouge">activity_main</code></p>
 
-<p>fragment layout: <code>fragment_shopping</code></p>
+<p>fragment layout: <code class="highlighter-rouge">fragment_shopping</code></p>
 
-<p>Dialog layout: <code>dialog_loading</code></p>
+<p>Dialog layout: <code class="highlighter-rouge">dialog_loading</code></p>
 
 <h3 id="id-">资源 ID 命名规范</h3>
 
-<p>（个人习惯）命名模式为：<code>{view_name}_{view 描述}_{xml关联的 Activity}</code>，例如：</p>
+<p>（个人习惯）命名模式为：<code class="highlighter-rouge"><span class="p">{</span><span class="err">view_name</span><span class="p">}</span><span class="err">_</span><span class="p">{</span><span class="err">view</span><span class="w"> </span><span class="err">描述</span><span class="p">}</span><span class="err">_</span><span class="p">{</span><span class="err">xml关联的</span><span class="w"> </span><span class="err">Activity</span><span class="p">}</span></code>，例如：</p>
 
-<p><code>btn_send_main</code></p>
+<p><code class="highlighter-rouge">btn_send_main</code></p>
 
 <p>常见控件View与其缩写对照参考表如下:</p>
 
@@ -408,7 +408,7 @@
 
 <h3 id="section-8">空格</h3>
 
-<p><code>if else</code>，<code>while</code>,<code>运算符</code>等后面需用空格隔开</p>
+<p><code class="highlighter-rouge">if else</code>，<code class="highlighter-rouge">while</code>,<code class="highlighter-rouge">运算符</code>等后面需用空格隔开</p>
 
 <h3 id="section-9">方法参数</h3>
 
@@ -435,8 +435,6 @@
 
                 <hr>
 
-                
-
                 <ul class="pager">
                     
                     <li class="previous">
@@ -450,37 +448,34 @@
                     
                 </ul>
 
-
-                
-                <!-- 多说评论框 start -->
-                <div class="comment">
-                    <div class="ds-thread" data-thread-key="/2015/10/03/android-code-guideline" data-title="Android 代码命名规范" data-url="http://hellosilence.github.io/2015/10/03/android-code-guideline/"></div>
-                </div>
-                <!-- 多说评论框 end -->
-                
             </div>
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 post-container" id="disqus_thread"></div>
+            <script>
+            <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"hellosilence"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0]
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
         </div>
+
     </div>
+
+
+
 </article>
 
 <div id="back-top">
   <a href="#top" title="回到顶部"></a>
 </div>
-
-
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"hellosilence"};
-    (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0]
-         || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-</script>
-<!-- 多说公共JS代码 end -->
 
 
 <!-- async load function -->
@@ -494,6 +489,7 @@ var duoshuoQuery = {short_name:"hellosilence"};
       s.parentNode.insertBefore(o, s);
     }
 </script>
+
 
 <style>
     /* place left on bigger screen */

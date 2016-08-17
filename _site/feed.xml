@@ -5,8 +5,8 @@
     <description>You are reading my blog </description>
     <link>http://hellosilence.github.io/</link>
     <atom:link href="http://hellosilence.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 11 Apr 2016 21:05:40 +0800</pubDate>
-    <lastBuildDate>Mon, 11 Apr 2016 21:05:40 +0800</lastBuildDate>
+    <pubDate>Wed, 17 Aug 2016 21:43:33 +0800</pubDate>
+    <lastBuildDate>Wed, 17 Aug 2016 21:43:33 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -15,7 +15,7 @@
 
 &lt;ol&gt;
   &lt;li&gt;
-    &lt;p&gt;Android Studio 的 &lt;code&gt;Preference&lt;/code&gt;中的&lt;code&gt;keymap&lt;/code&gt;，里面就是所有的快捷键了&lt;/p&gt;
+    &lt;p&gt;Android Studio 的 &lt;code class=&quot;highlighter-rouge&quot;&gt;Preference&lt;/code&gt;中的&lt;code class=&quot;highlighter-rouge&quot;&gt;keymap&lt;/code&gt;，里面就是所有的快捷键了&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Android Studio 是基于 Intellij Idea 的，所以两者的快捷键通用，官方给出的快捷键大全（PDF 版）&lt;/p&gt;
@@ -80,19 +80,19 @@
 
 &lt;p&gt;采用&lt;strong&gt;反域名命名规则&lt;/strong&gt;，包名全部小写，连续的单词只是简单地连接起来，不使用下划线，一级包名为com，二级包名为xxx（可以是公司域名或者个人命名），三级包名根据应用进行命名，四级包名为模块名或层级名。如：&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;com.isa.crm.activity&lt;/code&gt;, &lt;code&gt;com.isa.crm.adapter&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;com.isa.crm.activity&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;com.isa.crm.adapter&lt;/code&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;java&quot;&gt;JAVA类命名规范&lt;/h3&gt;
 
 &lt;p&gt;采用&lt;strong&gt;大驼峰式命名法&lt;/strong&gt;，尽量避免缩写，除非该缩写是众所周知的，比如HTML，URL,如果类名称包含单词缩写，则单词缩写的每个字母均应大写。如：&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;ProductListActivity&lt;/code&gt;，&lt;code&gt;ProductListAdapter&lt;/code&gt;，&lt;code&gt;JsonHTTPSRequest&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ProductListActivity&lt;/code&gt;，&lt;code class=&quot;highlighter-rouge&quot;&gt;ProductListAdapter&lt;/code&gt;，&lt;code class=&quot;highlighter-rouge&quot;&gt;JsonHTTPSRequest&lt;/code&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;section-2&quot;&gt;接口命名规范&lt;/h3&gt;
 
-&lt;p&gt;命名规则与类一样采用&lt;strong&gt;大驼峰命名法&lt;/strong&gt;，多以&lt;code&gt;able&lt;/code&gt;或&lt;code&gt;ible&lt;/code&gt;结尾。例如：&lt;/p&gt;
+&lt;p&gt;命名规则与类一样采用&lt;strong&gt;大驼峰命名法&lt;/strong&gt;，多以&lt;code class=&quot;highlighter-rouge&quot;&gt;able&lt;/code&gt;或&lt;code class=&quot;highlighter-rouge&quot;&gt;ible&lt;/code&gt;结尾。例如：&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;interface Runable&lt;/code&gt;，&lt;code&gt;interface Accessible&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;interface Runable&lt;/code&gt;，&lt;code class=&quot;highlighter-rouge&quot;&gt;interface Accessible&lt;/code&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;section-3&quot;&gt;成员变量命名规范&lt;/h3&gt;
 
@@ -104,23 +104,23 @@
 
     &lt;p&gt;使用标准的Java命名方法，不推荐使用Google的m命名法。例如：&lt;/p&gt;
 
-    &lt;p&gt;&lt;code&gt;private String userName&lt;/code&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;private String userName&lt;/code&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;常量命名&lt;/p&gt;
 
     &lt;p&gt;常量使用全大写字母加下划线的方式命名，例如：&lt;/p&gt;
 
-    &lt;p&gt;&lt;code&gt;public static final String TAG = &quot;tag”;&lt;/code&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;public static final String TAG = &quot;tag”;&lt;/code&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;控件实例命名&lt;/p&gt;
 
     &lt;p&gt;不少文章说，类中控件名称必须与xml布局id保持一致，个人对这条存疑，我是这么做的：&lt;/p&gt;
 
-    &lt;p&gt;布局文件中Button的id为&lt;code&gt;android:id=&quot;@+id/btn_pay_main”&lt;/code&gt;(main是xml文件对应的Activity或其他）&lt;/p&gt;
+    &lt;p&gt;布局文件中Button的id为&lt;code class=&quot;highlighter-rouge&quot;&gt;android:id=&quot;@+id/btn_pay_main”&lt;/code&gt;(main是xml文件对应的Activity或其他）&lt;/p&gt;
 
-    &lt;p&gt;类中的对象名称则为&lt;code&gt;private Button btnPayMain&lt;/code&gt;,这是Android Studio中的&lt;code&gt;Android Layout ID Converter&lt;/code&gt;插件自动生成的。&lt;/p&gt;
+    &lt;p&gt;类中的对象名称则为&lt;code class=&quot;highlighter-rouge&quot;&gt;private Button btnPayMain&lt;/code&gt;,这是Android Studio中的&lt;code class=&quot;highlighter-rouge&quot;&gt;Android Layout ID Converter&lt;/code&gt;插件自动生成的。&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
@@ -128,7 +128,7 @@
 
 &lt;p&gt;动词或动名词，采用小驼峰命名法。例如:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;run()&lt;/code&gt;,&lt;code&gt;onCreate()&lt;/code&gt;,&lt;code&gt;syncProducts()&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;run()&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;onCreate()&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;syncProducts()&lt;/code&gt;&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -181,21 +181,21 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h3 id=&quot;layout&quot;&gt;布局文件（&lt;code&gt;layout&lt;/code&gt;）命名规范&lt;/h3&gt;
+&lt;h3 id=&quot;layout&quot;&gt;布局文件（&lt;code class=&quot;highlighter-rouge&quot;&gt;layout&lt;/code&gt;）命名规范&lt;/h3&gt;
 
 &lt;p&gt;全部小写，采用下划线命名法。&lt;/p&gt;
 
-&lt;p&gt;activity layout：&lt;code&gt;activity_main&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;activity layout：&lt;code class=&quot;highlighter-rouge&quot;&gt;activity_main&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;fragment layout: &lt;code&gt;fragment_shopping&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;fragment layout: &lt;code class=&quot;highlighter-rouge&quot;&gt;fragment_shopping&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;Dialog layout: &lt;code&gt;dialog_loading&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Dialog layout: &lt;code class=&quot;highlighter-rouge&quot;&gt;dialog_loading&lt;/code&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;id-&quot;&gt;资源 ID 命名规范&lt;/h3&gt;
 
-&lt;p&gt;（个人习惯）命名模式为：&lt;code&gt;{view_name}_{view 描述}_{xml关联的 Activity}&lt;/code&gt;，例如：&lt;/p&gt;
+&lt;p&gt;（个人习惯）命名模式为：&lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;view_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;view&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;描述&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;xml关联的&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Activity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;，例如：&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;btn_send_main&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;btn_send_main&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;常见控件View与其缩写对照参考表如下:&lt;/p&gt;
 
@@ -305,7 +305,7 @@
 
 &lt;h3 id=&quot;section-8&quot;&gt;空格&lt;/h3&gt;
 
-&lt;p&gt;&lt;code&gt;if else&lt;/code&gt;，&lt;code&gt;while&lt;/code&gt;,&lt;code&gt;运算符&lt;/code&gt;等后面需用空格隔开&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;if else&lt;/code&gt;，&lt;code class=&quot;highlighter-rouge&quot;&gt;while&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;运算符&lt;/code&gt;等后面需用空格隔开&lt;/p&gt;
 
 &lt;h3 id=&quot;section-9&quot;&gt;方法参数&lt;/h3&gt;
 
@@ -447,7 +447,7 @@
 
 &lt;h3 id=&quot;section-11&quot;&gt;行内代码块&lt;/h3&gt;
 
-&lt;p&gt;&lt;code&gt;html&lt;/code&gt; &lt;code&gt;markdown&lt;/code&gt; &lt;code&gt;我是行内代码块&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;html&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;markdown&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;我是行内代码块&lt;/code&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;section-12&quot;&gt;表格&lt;/h3&gt;
 
