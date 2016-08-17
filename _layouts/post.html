@@ -1,6 +1,4 @@
----
-layout: default
----
+--- layout: default ---
 
 <!-- Image to hack wechat -->
 <!-- <img src="/img/icon_wechat.png" width="0" height="0"> -->
@@ -8,27 +6,21 @@ layout: default
 
 <!-- Post Header -->
 <style type="text/css">
-    header.intro-header{
+    header.intro-header {
         background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')
     }
 </style>
-<header class="intro-header" >
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
                     <div class="tags">
                         {% for tag in page.tags %}
-                        <a class="tag" href="/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a>
-                        {% endfor %}
+                        <a class="tag" href="/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a> {% endfor %}
                     </div>
-                    <h1>{{ page.title }}</h1>
-                    {% comment %}
-                        always create a h2 for keeping the margin , Hux
-                    {% endcomment %}
-                    {% comment %} if page.subtitle {% endcomment %}
-                    <h2 class="subheading">{{ page.subtitle }}</h2>
-                    {% comment %} endif {% endcomment %}
+                    <h1>{{ page.title }}</h1> {% comment %} always create a h2 for keeping the margin , Hux {% endcomment %} {% comment %} if page.subtitle {% endcomment %}
+                    <h2 class="subheading">{{ page.subtitle }}</h2> {% comment %} endif {% endcomment %}
                     <span class="meta">Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }}</span>
                 </div>
             </div>
@@ -42,7 +34,7 @@ layout: default
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 post-container">
 
-				{{ content }}
+                {{ content }}
 
                 <hr>
 
@@ -51,37 +43,37 @@ layout: default
                     <li class="previous">
                         <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">&larr; Previous Post</a>
                     </li>
-                    {% endif %}
-                    {% if page.next.url %}
+                    {% endif %} {% if page.next.url %}
                     <li class="next">
                         <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">Next Post &rarr;</a>
                     </li>
                     {% endif %}
                 </ul>
 
-            </div>
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 post-container" id="disqus_thread"></div>
-            <!-- 多说评论框 start -->
-	<div class="ds-thread"
-  data-thread-key="{{page.id}}"
-  data-title="{{page.title}}"
-  data-url="{{site.url}}{{site.baseurl}}{{page.url}}" >
-</div>
-<!-- 多说评论框 end -->
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 post-container" id="disqus_thread"></div>
+                <!-- 多说评论框 start -->
+                <div class="ds-thread" data-thread-key="{{page.id}}" data-title="{{page.title}}" data-url="{{site.url}}{{site.baseurl}}{{page.url}}">
+                </div>
+                <!-- 多说评论框 end -->
 
-            <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"hellosilence"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0]
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-<!-- 多说公共JS代码 end -->
+                <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+                <script type="text/javascript">
+                    var duoshuoQuery = {
+                        short_name: "hellosilence"
+                    };
+                    (function() {
+                        var ds = document.createElement('script');
+                        ds.type = 'text/javascript';
+                        ds.async = true;
+                        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                        ds.charset = 'UTF-8';
+                        (document.getElementsByTagName('head')[0] ||
+                            document.getElementsByTagName('body')[0]).appendChild(ds);
+                    })();
+                </script>
+                <!-- 多说公共JS代码 end -->
+            </div>
+
 
         </div>
 
@@ -92,31 +84,37 @@ var duoshuoQuery = {short_name:"hellosilence"};
 </article>
 
 <div id="back-top">
-  <a href="#top" title="回到顶部"></a>
+    <a href="#top" title="回到顶部"></a>
 </div>
 
 
 <!-- async load function -->
 <script>
     function async(u, c) {
-      var d = document, t = 'script',
-          o = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      o.src = u;
-      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-      s.parentNode.insertBefore(o, s);
+        var d = document,
+            t = 'script',
+            o = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        o.src = u;
+        if (c) {
+            o.addEventListener('load', function(e) {
+                c(null, e);
+            }, false);
+        }
+        s.parentNode.insertBefore(o, s);
     }
 </script>
 
 
 <style>
     /* place left on bigger screen */
+
     @media all and (min-width: 800px) {
-        .anchorjs-link{
+        .anchorjs-link {
             position: absolute;
             left: -0.75em;
             font-size: 1.1em;
-            margin-top : -0.1em;
+            margin-top: -0.1em;
         }
     }
 </style>
