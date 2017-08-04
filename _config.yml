@@ -35,9 +35,10 @@ kramdown:
   hard_wrap: false
 # Duoshuo settings
  # Please set your own DuoShuo account.
-useDuoshuo: true    # Comment and Share
+
 useShare: true      # use Comment only. seeing the Share component is depend on Comment so we can NOT use share only.
 # Todo: Analysis settings
 # Please set your own analysis account
 #useBaiduAnalysis: true
 useGoogleAnalysis: true
+gems: [jekyll-paginate]

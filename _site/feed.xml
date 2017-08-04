@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Samuel&#39;s Blog</title>
+    <title>Samuel's Blog</title>
     <description>You are reading my blog </description>
-    <link>http://hellosilence.github.io/</link>
-    <atom:link href="http://hellosilence.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 17 Aug 2016 22:10:36 +0800</pubDate>
-    <lastBuildDate>Wed, 17 Aug 2016 22:10:36 +0800</lastBuildDate>
-    <generator>Jekyll v2.5.3</generator>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Fri, 04 Aug 2017 21:20:44 +0800</pubDate>
+    <lastBuildDate>Fri, 04 Aug 2017 21:20:44 +0800</lastBuildDate>
+    <generator>Jekyll v3.4.5</generator>
     
       <item>
         <title>Android Studio快捷键</title>
@@ -37,8 +37,8 @@
 
 </description>
         <pubDate>Wed, 28 Oct 2015 20:00:00 +0800</pubDate>
-        <link>http://hellosilence.github.io/2015/10/28/android-studio-keymap/</link>
-        <guid isPermaLink="true">http://hellosilence.github.io/2015/10/28/android-studio-keymap/</guid>
+        <link>http://localhost:4000/2015/10/28/android-studio-keymap/</link>
+        <guid isPermaLink="true">http://localhost:4000/2015/10/28/android-studio-keymap/</guid>
         
         <category>Android</category>
         
@@ -49,7 +49,7 @@
     
       <item>
         <title>Android 代码命名规范</title>
-        <description>&lt;h2 id=&quot;section&quot;&gt;命名方法&lt;/h2&gt;
+        <description>&lt;h2 id=&quot;命名方法&quot;&gt;命名方法&lt;/h2&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
@@ -74,27 +74,27 @@
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&quot;android-&quot;&gt;Android 命名规范&lt;/h2&gt;
+&lt;h2 id=&quot;android-命名规范&quot;&gt;Android 命名规范&lt;/h2&gt;
 
-&lt;h3 id=&quot;section-1&quot;&gt;包命名规范&lt;/h3&gt;
+&lt;h3 id=&quot;包命名规范&quot;&gt;包命名规范&lt;/h3&gt;
 
 &lt;p&gt;采用&lt;strong&gt;反域名命名规则&lt;/strong&gt;，包名全部小写，连续的单词只是简单地连接起来，不使用下划线，一级包名为com，二级包名为xxx（可以是公司域名或者个人命名），三级包名根据应用进行命名，四级包名为模块名或层级名。如：&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;com.isa.crm.activity&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;com.isa.crm.adapter&lt;/code&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;java&quot;&gt;JAVA类命名规范&lt;/h3&gt;
+&lt;h3 id=&quot;java类命名规范&quot;&gt;JAVA类命名规范&lt;/h3&gt;
 
 &lt;p&gt;采用&lt;strong&gt;大驼峰式命名法&lt;/strong&gt;，尽量避免缩写，除非该缩写是众所周知的，比如HTML，URL,如果类名称包含单词缩写，则单词缩写的每个字母均应大写。如：&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ProductListActivity&lt;/code&gt;，&lt;code class=&quot;highlighter-rouge&quot;&gt;ProductListAdapter&lt;/code&gt;，&lt;code class=&quot;highlighter-rouge&quot;&gt;JsonHTTPSRequest&lt;/code&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;section-2&quot;&gt;接口命名规范&lt;/h3&gt;
+&lt;h3 id=&quot;接口命名规范&quot;&gt;接口命名规范&lt;/h3&gt;
 
 &lt;p&gt;命名规则与类一样采用&lt;strong&gt;大驼峰命名法&lt;/strong&gt;，多以&lt;code class=&quot;highlighter-rouge&quot;&gt;able&lt;/code&gt;或&lt;code class=&quot;highlighter-rouge&quot;&gt;ible&lt;/code&gt;结尾。例如：&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;interface Runable&lt;/code&gt;，&lt;code class=&quot;highlighter-rouge&quot;&gt;interface Accessible&lt;/code&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;section-3&quot;&gt;成员变量命名规范&lt;/h3&gt;
+&lt;h3 id=&quot;成员变量命名规范&quot;&gt;成员变量命名规范&lt;/h3&gt;
 
 &lt;p&gt;采用&lt;strong&gt;小驼峰命名法&lt;/strong&gt;&lt;/p&gt;
 
@@ -124,7 +124,7 @@
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&quot;section-4&quot;&gt;方法命名规范&lt;/h3&gt;
+&lt;h3 id=&quot;方法命名规范&quot;&gt;方法命名规范&lt;/h3&gt;
 
 &lt;p&gt;动词或动名词，采用小驼峰命名法。例如:&lt;/p&gt;
 
@@ -181,7 +181,7 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h3 id=&quot;layout&quot;&gt;布局文件（&lt;code class=&quot;highlighter-rouge&quot;&gt;layout&lt;/code&gt;）命名规范&lt;/h3&gt;
+&lt;h3 id=&quot;布局文件layout命名规范&quot;&gt;布局文件（&lt;code class=&quot;highlighter-rouge&quot;&gt;layout&lt;/code&gt;）命名规范&lt;/h3&gt;
 
 &lt;p&gt;全部小写，采用下划线命名法。&lt;/p&gt;
 
@@ -191,7 +191,7 @@
 
 &lt;p&gt;Dialog layout: &lt;code class=&quot;highlighter-rouge&quot;&gt;dialog_loading&lt;/code&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;id-&quot;&gt;资源 ID 命名规范&lt;/h3&gt;
+&lt;h3 id=&quot;资源-id-命名规范&quot;&gt;资源 ID 命名规范&lt;/h3&gt;
 
 &lt;p&gt;（个人习惯）命名模式为：&lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;view_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;view&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;描述&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;xml关联的&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Activity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;，例如：&lt;/p&gt;
 
@@ -260,7 +260,7 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h3 id=&quot;section-5&quot;&gt;图片资源文件命名&lt;/h3&gt;
+&lt;h3 id=&quot;图片资源文件命名&quot;&gt;图片资源文件命名&lt;/h3&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -297,21 +297,21 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h2 id=&quot;section-6&quot;&gt;代码风格&lt;/h2&gt;
+&lt;h2 id=&quot;代码风格&quot;&gt;代码风格&lt;/h2&gt;
 
-&lt;h3 id=&quot;section-7&quot;&gt;大括号风格&lt;/h3&gt;
+&lt;h3 id=&quot;大括号风格&quot;&gt;大括号风格&lt;/h3&gt;
 
 &lt;p&gt;行尾和换行（IDE 一般都有代码自动格式化，可以自己修改）&lt;/p&gt;
 
-&lt;h3 id=&quot;section-8&quot;&gt;空格&lt;/h3&gt;
+&lt;h3 id=&quot;空格&quot;&gt;空格&lt;/h3&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;if else&lt;/code&gt;，&lt;code class=&quot;highlighter-rouge&quot;&gt;while&lt;/code&gt;,&lt;code class=&quot;highlighter-rouge&quot;&gt;运算符&lt;/code&gt;等后面需用空格隔开&lt;/p&gt;
 
-&lt;h3 id=&quot;section-9&quot;&gt;方法参数&lt;/h3&gt;
+&lt;h3 id=&quot;方法参数&quot;&gt;方法参数&lt;/h3&gt;
 
 &lt;p&gt;当方法参数数量过多时，需进行换行处理&lt;/p&gt;
 
-&lt;h3 id=&quot;section-10&quot;&gt;注释&lt;/h3&gt;
+&lt;h3 id=&quot;注释&quot;&gt;注释&lt;/h3&gt;
 
 &lt;ol&gt;
   &lt;li&gt;必须要对所有实例变量、类常量进行注释说明&lt;/li&gt;
@@ -330,8 +330,8 @@
 &lt;p&gt;​&lt;/p&gt;
 </description>
         <pubDate>Sat, 03 Oct 2015 20:00:00 +0800</pubDate>
-        <link>http://hellosilence.github.io/2015/10/03/android-code-guideline/</link>
-        <guid isPermaLink="true">http://hellosilence.github.io/2015/10/03/android-code-guideline/</guid>
+        <link>http://localhost:4000/2015/10/03/android-code-guideline/</link>
+        <guid isPermaLink="true">http://localhost:4000/2015/10/03/android-code-guideline/</guid>
         
         <category>Android</category>
         
@@ -342,7 +342,7 @@
     
       <item>
         <title>总有相见恨晚的朋友——认识 markdown</title>
-        <description>&lt;h1 id=&quot;section&quot;&gt;目录&lt;/h1&gt;
+        <description>&lt;h1 id=&quot;目录&quot;&gt;目录&lt;/h1&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
@@ -358,7 +358,7 @@
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&quot;section-1&quot;&gt;前言&lt;/h2&gt;
+&lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
 
 &lt;p&gt;总会有相见恨晚的时候，markdown 就给了我这种感觉。&lt;/p&gt;
 
@@ -366,7 +366,7 @@
 
 &lt;p&gt;因此，掌握了 markdown 的语法后，我就开始寻找一款得心应手的工具。&lt;/p&gt;
 
-&lt;h2 id=&quot;section-2&quot;&gt;编辑器初体验&lt;/h2&gt;
+&lt;h2 id=&quot;编辑器初体验&quot;&gt;编辑器初体验&lt;/h2&gt;
 
 &lt;p&gt;我使用软件的习惯是，在正式使用之前，体验所有类似功能的软件，寻找最好/适合的软件，然后一直用下去（当然，需求增加导致更换软件也挺正常的），markdown 也一样。我理想中的 markdown 编辑器应该是这样的：&lt;/p&gt;
 
@@ -391,21 +391,21 @@
 
 &lt;p&gt;接下来测试一下 markdown 显示效果。&lt;/p&gt;
 
-&lt;h2 id=&quot;section-3&quot;&gt;语法&lt;/h2&gt;
+&lt;h2 id=&quot;语法&quot;&gt;语法&lt;/h2&gt;
 
-&lt;h3 id=&quot;section-4&quot;&gt;标题一&lt;/h3&gt;
+&lt;h3 id=&quot;标题一&quot;&gt;标题一&lt;/h3&gt;
 
-&lt;h4 id=&quot;section-5&quot;&gt;标题二&lt;/h4&gt;
+&lt;h4 id=&quot;标题二&quot;&gt;标题二&lt;/h4&gt;
 
-&lt;h5 id=&quot;section-6&quot;&gt;标题三&lt;/h5&gt;
+&lt;h5 id=&quot;标题三&quot;&gt;标题三&lt;/h5&gt;
 
-&lt;h3 id=&quot;section-7&quot;&gt;加粗和倾斜&lt;/h3&gt;
+&lt;h3 id=&quot;加粗和倾斜&quot;&gt;加粗和倾斜&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;加粗&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;倾斜&lt;/em&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;section-8&quot;&gt;无序列表&lt;/h3&gt;
+&lt;h3 id=&quot;无序列表&quot;&gt;无序列表&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;苹果&lt;/li&gt;
@@ -413,7 +413,7 @@
   &lt;li&gt;橙子&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;section-9&quot;&gt;有序列表&lt;/h3&gt;
+&lt;h3 id=&quot;有序列表&quot;&gt;有序列表&lt;/h3&gt;
 
 &lt;ol&gt;
   &lt;li&gt;第一个&lt;/li&gt;
@@ -421,7 +421,7 @@
   &lt;li&gt;第三个&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&quot;section-10&quot;&gt;代码块&lt;/h3&gt;
+&lt;h3 id=&quot;代码块&quot;&gt;代码块&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&quot;language-Java&quot;&gt;public class IPDemo {
     public static void main(String[] args) throws UnknownHostException {
@@ -445,11 +445,11 @@
 }
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&quot;section-11&quot;&gt;行内代码块&lt;/h3&gt;
+&lt;h3 id=&quot;行内代码块&quot;&gt;行内代码块&lt;/h3&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;html&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;markdown&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;我是行内代码块&lt;/code&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;section-12&quot;&gt;表格&lt;/h3&gt;
+&lt;h3 id=&quot;表格&quot;&gt;表格&lt;/h3&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -478,7 +478,7 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h3 id=&quot;section-13&quot;&gt;引用&lt;/h3&gt;
+&lt;h3 id=&quot;引用&quot;&gt;引用&lt;/h3&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;床前明月光&lt;/p&gt;
@@ -490,18 +490,18 @@
   &lt;p&gt;低头思故乡&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h3 id=&quot;section-14&quot;&gt;链接&lt;/h3&gt;
+&lt;h3 id=&quot;链接&quot;&gt;链接&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://www.google.com&quot;&gt;Google&lt;/a&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;section-15&quot;&gt;插入图片&lt;/h3&gt;
+&lt;h3 id=&quot;插入图片&quot;&gt;插入图片&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/img/eagle.jpg&quot; alt=&quot;Post Sample Image&quot; /&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Wed, 16 Sep 2015 20:00:00 +0800</pubDate>
-        <link>http://hellosilence.github.io/2015/09/16/markdown-test/</link>
-        <guid isPermaLink="true">http://hellosilence.github.io/2015/09/16/markdown-test/</guid>
+        <link>http://localhost:4000/2015/09/16/markdown-test/</link>
+        <guid isPermaLink="true">http://localhost:4000/2015/09/16/markdown-test/</guid>
         
         <category>markdown</category>
         
