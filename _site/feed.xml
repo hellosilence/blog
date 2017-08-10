@@ -5,9 +5,65 @@
     <description>You are reading my blog </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 04 Aug 2017 21:20:44 +0800</pubDate>
-    <lastBuildDate>Fri, 04 Aug 2017 21:20:44 +0800</lastBuildDate>
+    <pubDate>Thu, 10 Aug 2017 10:56:06 +0800</pubDate>
+    <lastBuildDate>Thu, 10 Aug 2017 10:56:06 +0800</lastBuildDate>
     <generator>Jekyll v3.4.5</generator>
+    
+      <item>
+        <title>Android 常用开发工具</title>
+        <description>&lt;h1 id=&quot;android-常用开发工具&quot;&gt;Android 常用开发工具&lt;/h1&gt;
+
+&lt;p&gt;正所谓工欲善其事必先利其器，Android 开发中用到了很多软件（macOS 平台），写下来留个备忘。&lt;/p&gt;
+
+&lt;h3 id=&quot;android-studio&quot;&gt;Android Studio&lt;/h3&gt;
+&lt;p&gt;Google 官方指定的开发工具（&lt;a href=&quot;https://developer.android.com/studio/index.html&quot;&gt;官网&lt;/a&gt;）。还在用 Eclipse 的应该大多是由于历史遗留原因，尽快转吧。如果访问不了官方网站，可以试试国内的：&lt;a href=&quot;http://www.android-studio.org/&quot;&gt;Android Studio 中文&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;intelij-idea&quot;&gt;Intelij IDEA&lt;/h3&gt;
+&lt;p&gt;总有要单独写点 Java 程序的时候（&lt;a href=&quot;https://www.jetbrains.com/idea/&quot;&gt;官网&lt;/a&gt;），Intellij IDEA 更好用。实际上 Android Studio 就是基于 Intellij IDEA 的。JetBrains 出的几款编辑器都非常好用。&lt;/p&gt;
+
+&lt;h3 id=&quot;genymotion&quot;&gt;Genymotion&lt;/h3&gt;
+&lt;p&gt;最快的安卓虚拟机，需要下载 VirtualBox。个人版免费（&lt;a href=&quot;https://www.genymotion.com/&quot;&gt;官网&lt;/a&gt;）&lt;/p&gt;
+
+&lt;h3 id=&quot;android-file-transfer&quot;&gt;Android File Transfer&lt;/h3&gt;
+&lt;p&gt;官方的文件传输工具，连接手机和电脑（&lt;a href=&quot;https://www.android.com/filetransfer/&quot;&gt;官网&lt;/a&gt;）&lt;/p&gt;
+
+&lt;h3 id=&quot;handshaker&quot;&gt;HandShaker&lt;/h3&gt;
+&lt;p&gt;锤子出品的文件传输和管理工具，更直观好用（&lt;a href=&quot;https://itunes.apple.com/us/app/handshaker-manage-your-android-phones-at-ease/id1012930195?mt=12&quot;&gt;Mac App Store链接&lt;/a&gt;）&lt;/p&gt;
+
+&lt;h3 id=&quot;sourcetree&quot;&gt;SourceTree&lt;/h3&gt;
+&lt;p&gt;简单易用的版本控制工具（&lt;a href=&quot;https://www.sourcetreeapp.com/&quot;&gt;官网&lt;/a&gt;）&lt;/p&gt;
+
+&lt;h3 id=&quot;postman&quot;&gt;Postman&lt;/h3&gt;
+&lt;p&gt;接口调试，可下载 Chrome 插件或本地客户端（&lt;a href=&quot;https://www.getpostman.com/&quot;&gt;官网&lt;/a&gt;）&lt;/p&gt;
+
+&lt;h3 id=&quot;androidtool&quot;&gt;AndroidTool&lt;/h3&gt;
+&lt;p&gt;方便截图和录屏（&lt;a href=&quot;https://github.com/mortenjust/androidtool-mac&quot;&gt;Github 地址&lt;/a&gt;）&lt;/p&gt;
+
+&lt;h3 id=&quot;vysor&quot;&gt;Vysor&lt;/h3&gt;
+&lt;p&gt;Chrome 插件，可以把真机投影到电脑上（&lt;a href=&quot;https://chrome.google.com/webstore/detail/vysor/gidgenkbbabolejbgbpnhbimgjbffefm&quot;&gt;Chrome 商店地址&lt;/a&gt;）&lt;/p&gt;
+
+&lt;h3 id=&quot;airmirror&quot;&gt;AirMirror&lt;/h3&gt;
+&lt;p&gt;投影真机到电脑上，需要配合 AirDroid 使用（&lt;a href=&quot;https://chrome.google.com/webstore/detail/airmirror/macmgoeeggnlnmpiojbcniblabkdjphe&quot;&gt;Chrome 商店地址&lt;/a&gt;）&lt;/p&gt;
+
+&lt;h3 id=&quot;atom&quot;&gt;Atom&lt;/h3&gt;
+&lt;p&gt;Github 出的编辑器，非常好用，插件也足够丰富，已成为日常主力（&lt;a href=&quot;https://atom.io/&quot;&gt;官网&lt;/a&gt;）&lt;/p&gt;
+&lt;h3 id=&quot;sublime-text-3&quot;&gt;Sublime Text 3&lt;/h3&gt;
+&lt;p&gt;老牌的编辑器了，处理 BOM 问题的时候会用到（&lt;a href=&quot;https://www.sublimetext.com/3&quot;&gt;官网&lt;/a&gt;）&lt;/p&gt;
+
+&lt;h3 id=&quot;sqlpro-for-sqlite&quot;&gt;SQLPro for SQLite&lt;/h3&gt;
+&lt;p&gt;sqlite 可视化管理工具（&lt;a href=&quot;https://www.sqlitepro.com/&quot;&gt;官网&lt;/a&gt;）&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 01 Mar 2016 20:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2016/03/01/android-common-development-tools/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/03/01/android-common-development-tools/</guid>
+        
+        <category>Android</category>
+        
+        <category>工具</category>
+        
+        
+      </item>
     
       <item>
         <title>Android Studio快捷键</title>
