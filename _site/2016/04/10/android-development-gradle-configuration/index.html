@@ -9,9 +9,9 @@
     <meta name="description" content="You are reading my blog ">
     <link rel="shortcut icon" href="img/favicon.ico">
 
-    <title>Android 常用开发工具 - Samuel's Blog</title>
+    <title>Android 开发 Gradle 配置 - Samuel's Blog</title>
 
-    <link rel="canonical" href="http://localhost:4000/2016/03/01/android-common-development-tools/">
+    <link rel="canonical" href="http://localhost:4000/2016/04/10/android-development-gradle-configuration/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -130,11 +130,11 @@
                     <div class="tags">
                         
                         <a class="tag" href="/tags/#Android" title="Android">Android</a> 
-                        <a class="tag" href="/tags/#工具" title="工具">工具</a> 
+                        <a class="tag" href="/tags/#Gradle" title="Gradle">Gradle</a> 
                     </div>
-                    <h1>Android 常用开发工具</h1>  
+                    <h1>Android 开发 Gradle 配置</h1>  
                     <h2 class="subheading"></h2> 
-                    <span class="meta">Posted by Samuel on March 1, 2016</span>
+                    <span class="meta">Posted by Samuel on April 10, 2016</span>
                 </div>
             </div>
         </div>
@@ -147,47 +147,94 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 post-container">
 
-                <h1 id="android-常用开发工具">Android 常用开发工具</h1>
+                <h1 id="android-开发-gradle-配置">Android 开发 Gradle 配置</h1>
+<p>Android 开发中经常需要打包测试，配置好 Gradle 后可以尽可能自动化，先看代码。</p>
 
-<p>正所谓工欲善其事必先利其器，Android 开发中用到了很多软件（macOS 平台），写下来留个备忘。</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>def releaseTime() {
+    return new Date().format("yyyyMMddHHmm")
+}
 
-<h3 id="android-studio">Android Studio</h3>
-<p>Google 官方指定的开发工具（<a href="https://developer.android.com/studio/index.html">官网</a>）。还在用 Eclipse 的应该大多是由于历史遗留原因，尽快转吧。如果访问不了官方网站，可以试试国内的：<a href="http://www.android-studio.org/">Android Studio 中文</a></p>
+def cmd = 'git rev-list HEAD --count'
+def initVersionName = '1.0.0'
+def gitVersionCode = cmd.execute().text.trim().toInteger()
+def gitVersionName = initVersionName + '.' + gitVersionCode
 
-<h3 id="intelij-idea">Intelij IDEA</h3>
-<p>总有要单独写点 Java 程序的时候（<a href="https://www.jetbrains.com/idea/">官网</a>），Intellij IDEA 更好用。实际上 Android Studio 就是基于 Intellij IDEA 的。JetBrains 出的几款编辑器都非常好用。</p>
 
-<h3 id="genymotion">Genymotion</h3>
-<p>最快的安卓虚拟机，需要下载 VirtualBox。个人版免费（<a href="https://www.genymotion.com/">官网</a>）</p>
+android {
+    signingConfigs {
+        releaseconfig {
+            keyAlias 'abc'
+            keyPassword 'abc123456'
+            storeFile file('./abc.jks')
+            storePassword 'abc123456'
+        }
+    }
+    compileSdkVersion 25
+    buildToolsVersion "25.0.1"
+    defaultConfig {
+        applicationId "com.xyz.abc"
+        minSdkVersion 16
+        targetSdkVersion 22
+        versionCode gitVersionCode
+        versionName gitVersionName
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
 
-<h3 id="android-file-transfer">Android File Transfer</h3>
-<p>官方的文件传输工具，连接手机和电脑（<a href="https://www.android.com/filetransfer/">官网</a>）</p>
+    productFlavors {
+        Xiaomi {}
+        Baidu {}
+        Ali {}
+        Yingyongbao {}
+        Market360 {}
+        Huawei {}
+    }
 
-<h3 id="handshaker">HandShaker</h3>
-<p>锤子出品的文件传输和管理工具，更直观好用（<a href="https://itunes.apple.com/us/app/handshaker-manage-your-android-phones-at-ease/id1012930195?mt=12">Mac App Store链接</a>）</p>
+    productFlavors.all {
+        flavor -&gt;
+            flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+    }
 
-<h3 id="sourcetree">SourceTree</h3>
-<p>简单易用的版本控制工具（<a href="https://www.sourcetreeapp.com/">官网</a>）</p>
+    buildTypes {
+        debug {
 
-<h3 id="postman">Postman</h3>
-<p>接口调试，可下载 Chrome 插件或本地客户端（<a href="https://www.getpostman.com/">官网</a>）</p>
+            versionNameSuffix "-debug"
+            minifyEnabled false
+            zipAlignEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.debug
+        }
 
-<h3 id="androidtool">AndroidTool</h3>
-<p>方便截图和录屏（<a href="https://github.com/mortenjust/androidtool-mac">Github 地址</a>）</p>
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.releaseconfig
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources false
 
-<h3 id="vysor">Vysor</h3>
-<p>Chrome 插件，可以把真机投影到电脑上（<a href="https://chrome.google.com/webstore/detail/vysor/gidgenkbbabolejbgbpnhbimgjbffefm">Chrome 商店地址</a>）</p>
+            applicationVariants.all { variant -&gt;
 
-<h3 id="airmirror">AirMirror</h3>
-<p>投影真机到电脑上，需要配合 AirDroid 使用（<a href="https://chrome.google.com/webstore/detail/airmirror/macmgoeeggnlnmpiojbcniblabkdjphe">Chrome 商店地址</a>）</p>
+                variant.outputs.each { output -&gt;
+                    def outputFile = output.outputFile
+                    if (outputFile != null &amp;&amp; outputFile.name.endsWith('.apk')) {
+                        def fileName = "abc-${variant.buildType.name}-v${defaultConfig.versionName}-${variant.productFlavors[0].name}-${releaseTime()}.apk"
+                        output.outputFile = new File(outputFile.parent, fileName)
+                    }
+                }
+            }
 
-<h3 id="atom">Atom</h3>
-<p>Github 出的编辑器，非常好用，插件也足够丰富，已成为日常主力（<a href="https://atom.io/">官网</a>）</p>
-<h3 id="sublime-text-3">Sublime Text 3</h3>
-<p>老牌的编辑器了，处理 BOM 问题的时候会用到（<a href="https://www.sublimetext.com/3">官网</a>）</p>
+        }
+    }
 
-<h3 id="sqlpro-for-sqlite">SQLPro for SQLite</h3>
-<p>sqlite 可视化管理工具（<a href="https://www.sqlitepro.com/">官网</a>）</p>
+}
+</code></pre>
+</div>
+
+<p>先定义了几个变量：<code class="highlighter-rouge">releaseTime</code>代表时间，<code class="highlighter-rouge">cmd</code> 代表 git 提交次数，加上友盟的多渠道打包，最后生成的 apk 就会像这样：<code class="highlighter-rouge">abc-release-v1.0.0.18-Yingyongbao-201603161510.apk</code></p>
+
+<p>再配合蒲公英和 Jenkins 自动化部署，非常方便项目打包和测试。</p>
 
 
 
@@ -196,13 +243,9 @@
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/2015/10/28/android-studio-keymap/" data-toggle="tooltip" data-placement="top" title="Android Studio快捷键">&larr; Previous Post</a>
+                        <a href="/2016/03/01/android-common-development-tools/" data-toggle="tooltip" data-placement="top" title="Android 常用开发工具">&larr; Previous Post</a>
                     </li>
                      
-                    <li class="next">
-                        <a href="/2016/04/10/android-development-gradle-configuration/" data-toggle="tooltip" data-placement="top" title="Android 开发 Gradle 配置">Next Post &rarr;</a>
-                    </li>
-                    
                 </ul>
 
 
