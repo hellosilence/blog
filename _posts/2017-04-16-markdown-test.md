@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "总有相见恨晚的朋友——认识 markdown"
-date:       2015-09-16 12:00:00
+date:       2017-04-16 12:00:00
 author:     "Samuel"
 tags:
     - markdown

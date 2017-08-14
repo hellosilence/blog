@@ -11,7 +11,7 @@
 
     <title>Android 开发 Gradle 配置 - Samuel's Blog</title>
 
-    <link rel="canonical" href="http://localhost:4000/2016/04/10/android-development-gradle-configuration/">
+    <link rel="canonical" href="http://localhost:4000/2017/06/10/android-development-gradle-configuration/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -134,7 +134,7 @@
                     </div>
                     <h1>Android 开发 Gradle 配置</h1>  
                     <h2 class="subheading"></h2> 
-                    <span class="meta">Posted by Samuel on April 10, 2016</span>
+                    <span class="meta">Posted by Samuel on June 10, 2017</span>
                 </div>
             </div>
         </div>
@@ -150,7 +150,7 @@
                 <h1 id="android-开发-gradle-配置">Android 开发 Gradle 配置</h1>
 <p>Android 开发中经常需要打包测试，配置好 Gradle 后可以尽可能自动化，先看代码。</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>def releaseTime() {
+<pre><code class="language-`gradle">def releaseTime() {
     return new Date().format("yyyyMMddHHmm")
 }
 
@@ -230,7 +230,6 @@ android {
 
 }
 </code></pre>
-</div>
 
 <p>先定义了几个变量：<code class="highlighter-rouge">releaseTime</code>代表时间，<code class="highlighter-rouge">cmd</code> 代表 git 提交次数，加上友盟的多渠道打包，最后生成的 apk 就会像这样：<code class="highlighter-rouge">abc-release-v1.0.0.18-Yingyongbao-201603161510.apk</code></p>
 
@@ -243,7 +242,7 @@ android {
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/2016/03/01/android-common-development-tools/" data-toggle="tooltip" data-placement="top" title="Android 常用开发工具">&larr; Previous Post</a>
+                        <a href="/2017/06/01/android-common-development-tools/" data-toggle="tooltip" data-placement="top" title="Android 常用开发工具">&larr; Previous Post</a>
                     </li>
                      
                 </ul>

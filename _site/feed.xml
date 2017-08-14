@@ -5,8 +5,8 @@
     <description>You are reading my blog </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 11 Aug 2017 11:26:34 +0800</pubDate>
-    <lastBuildDate>Fri, 11 Aug 2017 11:26:34 +0800</lastBuildDate>
+    <pubDate>Mon, 14 Aug 2017 11:38:13 +0800</pubDate>
+    <lastBuildDate>Mon, 14 Aug 2017 11:38:13 +0800</lastBuildDate>
     <generator>Jekyll v3.4.5</generator>
     
       <item>
@@ -14,7 +14,7 @@
         <description>&lt;h1 id=&quot;android-开发-gradle-配置&quot;&gt;Android 开发 Gradle 配置&lt;/h1&gt;
 &lt;p&gt;Android 开发中经常需要打包测试，配置好 Gradle 后可以尽可能自动化，先看代码。&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def releaseTime() {
+&lt;pre&gt;&lt;code class=&quot;language-`gradle&quot;&gt;def releaseTime() {
     return new Date().format(&quot;yyyyMMddHHmm&quot;)
 }
 
@@ -94,16 +94,15 @@ android {
 
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;先定义了几个变量：&lt;code class=&quot;highlighter-rouge&quot;&gt;releaseTime&lt;/code&gt;代表时间，&lt;code class=&quot;highlighter-rouge&quot;&gt;cmd&lt;/code&gt; 代表 git 提交次数，加上友盟的多渠道打包，最后生成的 apk 就会像这样：&lt;code class=&quot;highlighter-rouge&quot;&gt;abc-release-v1.0.0.18-Yingyongbao-201603161510.apk&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;再配合蒲公英和 Jenkins 自动化部署，非常方便项目打包和测试。&lt;/p&gt;
 
 </description>
-        <pubDate>Sun, 10 Apr 2016 20:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2016/04/10/android-development-gradle-configuration/</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/04/10/android-development-gradle-configuration/</guid>
+        <pubDate>Sat, 10 Jun 2017 20:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/06/10/android-development-gradle-configuration/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/06/10/android-development-gradle-configuration/</guid>
         
         <category>Android</category>
         
@@ -157,47 +156,9 @@ android {
 &lt;p&gt;sqlite 可视化管理工具（&lt;a href=&quot;https://www.sqlitepro.com/&quot;&gt;官网&lt;/a&gt;）&lt;/p&gt;
 
 </description>
-        <pubDate>Tue, 01 Mar 2016 20:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2016/03/01/android-common-development-tools/</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/03/01/android-common-development-tools/</guid>
-        
-        <category>Android</category>
-        
-        <category>工具</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Android Studio快捷键</title>
-        <description>&lt;p&gt;想要最全的快捷键？两种方法:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Android Studio 的 &lt;code class=&quot;highlighter-rouge&quot;&gt;Preference&lt;/code&gt;中的&lt;code class=&quot;highlighter-rouge&quot;&gt;keymap&lt;/code&gt;，里面就是所有的快捷键了&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Android Studio 是基于 Intellij Idea 的，所以两者的快捷键通用，官方给出的快捷键大全（PDF 版）&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Linux / Windows&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;https://www.jetbrains.com/idea/docs/IntelliJIDEA_ReferenceCard.pdf&quot;&gt;Android Studio 快捷键 PDF(Linus/Win）&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Mac&lt;/p&gt;
-
-    &lt;p&gt;&lt;a href=&quot;https://www.jetbrains.com/idea/docs/IntelliJIDEA_ReferenceCard_Mac.pdf&quot;&gt;Android Studio 快捷键 PDF(Mac）&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Wed, 28 Oct 2015 20:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2015/10/28/android-studio-keymap/</link>
-        <guid isPermaLink="true">http://localhost:4000/2015/10/28/android-studio-keymap/</guid>
+        <pubDate>Thu, 01 Jun 2017 20:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/06/01/android-common-development-tools/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/06/01/android-common-development-tools/</guid>
         
         <category>Android</category>
         
@@ -487,14 +448,53 @@ android {
 &lt;/blockquote&gt;
 
 &lt;p&gt;​&lt;/p&gt;
+
 </description>
-        <pubDate>Sat, 03 Oct 2015 20:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2015/10/03/android-code-guideline/</link>
-        <guid isPermaLink="true">http://localhost:4000/2015/10/03/android-code-guideline/</guid>
+        <pubDate>Wed, 03 May 2017 20:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/05/03/android-code-guideline/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/05/03/android-code-guideline/</guid>
         
         <category>Android</category>
         
         <category>学习笔记</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Android Studio快捷键</title>
+        <description>&lt;p&gt;想要最全的快捷键？两种方法:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Android Studio 的 &lt;code class=&quot;highlighter-rouge&quot;&gt;Preference&lt;/code&gt;中的&lt;code class=&quot;highlighter-rouge&quot;&gt;keymap&lt;/code&gt;，里面就是所有的快捷键了&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Android Studio 是基于 Intellij Idea 的，所以两者的快捷键通用，官方给出的快捷键大全（PDF 版）&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Linux / Windows&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://www.jetbrains.com/idea/docs/IntelliJIDEA_ReferenceCard.pdf&quot;&gt;Android Studio 快捷键 PDF(Linus/Win）&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Mac&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://www.jetbrains.com/idea/docs/IntelliJIDEA_ReferenceCard_Mac.pdf&quot;&gt;Android Studio 快捷键 PDF(Mac）&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Fri, 28 Apr 2017 20:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/04/28/android-studio-keymap/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/04/28/android-studio-keymap/</guid>
+        
+        <category>Android</category>
+        
+        <category>工具</category>
         
         
       </item>
@@ -658,9 +658,9 @@ android {
 &lt;p&gt;&lt;img src=&quot;/img/eagle.jpg&quot; alt=&quot;Post Sample Image&quot; /&gt;&lt;/p&gt;
 
 </description>
-        <pubDate>Wed, 16 Sep 2015 20:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2015/09/16/markdown-test/</link>
-        <guid isPermaLink="true">http://localhost:4000/2015/09/16/markdown-test/</guid>
+        <pubDate>Sun, 16 Apr 2017 20:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/04/16/markdown-test/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/04/16/markdown-test/</guid>
         
         <category>markdown</category>
         

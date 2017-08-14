@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Android 开发 Gradle 配置"
-date:       2016-04-10 12:00:00
+date:       2017-06-10 12:00:00
 author:     "Samuel"
 tags:
     - Android
@@ -10,7 +10,7 @@ tags:
 # Android 开发 Gradle 配置
 Android 开发中经常需要打包测试，配置好 Gradle 后可以尽可能自动化，先看代码。
 
-```
+````gradle
 def releaseTime() {
     return new Date().format("yyyyMMddHHmm")
 }

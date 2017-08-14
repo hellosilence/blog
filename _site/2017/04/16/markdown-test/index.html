@@ -9,9 +9,9 @@
     <meta name="description" content="You are reading my blog ">
     <link rel="shortcut icon" href="img/favicon.ico">
 
-    <title>Android 常用开发工具 - Samuel's Blog</title>
+    <title>总有相见恨晚的朋友——认识 markdown - Samuel's Blog</title>
 
-    <link rel="canonical" href="http://localhost:4000/2016/03/01/android-common-development-tools/">
+    <link rel="canonical" href="http://localhost:4000/2017/04/16/markdown-test/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -129,12 +129,11 @@
                 <div class="post-heading">
                     <div class="tags">
                         
-                        <a class="tag" href="/tags/#Android" title="Android">Android</a> 
-                        <a class="tag" href="/tags/#工具" title="工具">工具</a> 
+                        <a class="tag" href="/tags/#markdown" title="markdown">markdown</a> 
                     </div>
-                    <h1>Android 常用开发工具</h1>  
+                    <h1>总有相见恨晚的朋友——认识 markdown</h1>  
                     <h2 class="subheading"></h2> 
-                    <span class="meta">Posted by Samuel on March 1, 2016</span>
+                    <span class="meta">Posted by Samuel on April 16, 2017</span>
                 </div>
             </div>
         </div>
@@ -147,60 +146,170 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 post-container">
 
-                <h1 id="android-常用开发工具">Android 常用开发工具</h1>
+                <h1 id="目录">目录</h1>
 
-<p>正所谓工欲善其事必先利其器，Android 开发中用到了很多软件（macOS 平台），写下来留个备忘。</p>
+<ol>
+  <li>
+    <p><a href="#前言">前言</a></p>
+  </li>
+  <li>
+    <p><a href="#编辑器初体验">编辑器初体验</a></p>
+  </li>
+  <li>
+    <p><a href="#语法">语法</a></p>
 
-<h3 id="android-studio">Android Studio</h3>
-<p>Google 官方指定的开发工具（<a href="https://developer.android.com/studio/index.html">官网</a>）。还在用 Eclipse 的应该大多是由于历史遗留原因，尽快转吧。如果访问不了官方网站，可以试试国内的：<a href="http://www.android-studio.org/">Android Studio 中文</a></p>
+    <p>​</p>
+  </li>
+</ol>
 
-<h3 id="intelij-idea">Intelij IDEA</h3>
-<p>总有要单独写点 Java 程序的时候（<a href="https://www.jetbrains.com/idea/">官网</a>），Intellij IDEA 更好用。实际上 Android Studio 就是基于 Intellij IDEA 的。JetBrains 出的几款编辑器都非常好用。</p>
+<h2 id="前言">前言</h2>
 
-<h3 id="genymotion">Genymotion</h3>
-<p>最快的安卓虚拟机，需要下载 VirtualBox。个人版免费（<a href="https://www.genymotion.com/">官网</a>）</p>
+<p>总会有相见恨晚的时候，markdown 就给了我这种感觉。</p>
 
-<h3 id="android-file-transfer">Android File Transfer</h3>
-<p>官方的文件传输工具，连接手机和电脑（<a href="https://www.android.com/filetransfer/">官网</a>）</p>
+<p>了解 markdown 之后，才发现文字能够以如此简单的方式变得优雅。对写作者和设计者来说，对文字排版有更高的要求；但对于一般人，markdown 足以满足需要了。而且markdown 还有程序员喜欢的代码高亮功能。</p>
 
-<h3 id="handshaker">HandShaker</h3>
-<p>锤子出品的文件传输和管理工具，更直观好用（<a href="https://itunes.apple.com/us/app/handshaker-manage-your-android-phones-at-ease/id1012930195?mt=12">Mac App Store链接</a>）</p>
+<p>因此，掌握了 markdown 的语法后，我就开始寻找一款得心应手的工具。</p>
 
-<h3 id="sourcetree">SourceTree</h3>
-<p>简单易用的版本控制工具（<a href="https://www.sourcetreeapp.com/">官网</a>）</p>
+<h2 id="编辑器初体验">编辑器初体验</h2>
 
-<h3 id="postman">Postman</h3>
-<p>接口调试，可下载 Chrome 插件或本地客户端（<a href="https://www.getpostman.com/">官网</a>）</p>
+<p>我使用软件的习惯是，在正式使用之前，体验所有类似功能的软件，寻找最好/适合的软件，然后一直用下去（当然，需求增加导致更换软件也挺正常的），markdown 也一样。我理想中的 markdown 编辑器应该是这样的：</p>
 
-<h3 id="androidtool">AndroidTool</h3>
-<p>方便截图和录屏（<a href="https://github.com/mortenjust/androidtool-mac">Github 地址</a>）</p>
+<ol>
+  <li>markdown 语法支持</li>
+  <li>界面美观，操作简便</li>
+  <li>有文档管理功能</li>
+</ol>
 
-<h3 id="vysor">Vysor</h3>
-<p>Chrome 插件，可以把真机投影到电脑上（<a href="https://chrome.google.com/webstore/detail/vysor/gidgenkbbabolejbgbpnhbimgjbffefm">Chrome 商店地址</a>）</p>
+<p>怀着这样的期许，开始了漫漫寻觅之路。</p>
 
-<h3 id="airmirror">AirMirror</h3>
-<p>投影真机到电脑上，需要配合 AirDroid 使用（<a href="https://chrome.google.com/webstore/detail/airmirror/macmgoeeggnlnmpiojbcniblabkdjphe">Chrome 商店地址</a>）</p>
+<ol>
+  <li>Mou/MacDown：Mou 其实挺不错的，不少人在用，但是没有代码高亮功能。原作者已经出售了该软件，目前1.0正式版还没有完全发售。MacDown 的作者参考了 Mou 的设计，也有代码高亮功能。但是和 Mou 一样没有文档管理功能。</li>
+  <li>作业部落：体验过一段时间，功能很丰富，但是没有我想要的。（弱水三千，只取一瓢呀）。它的文档管理不直观，而且很依赖网络。虽然已经出了客户端，但是功能很简陋。此外，所有在线类的编辑器有一个潜在的缺点是：数据安全。个人或者小团队写的软件，可能会因为各种原因导致软件挂了。即使是大公司的产品也不一定非常可靠，比如Google Code. 所以要么文件存储在本地，要么有可靠的云服务。</li>
+  <li>马克飞象：前面说到数据安全。马克飞象就是专门为印象笔记打造的编辑器。缺点在于文件或者图片稍多，软件会卡顿，同步很慢。</li>
+  <li>Alternote：也是和印象笔记同步的软件。文档管理就是我想要的，而且界面美观！如果markdown 支持得更完善就好了。官网说后续版本会支持，期待中。  </li>
+  <li>Typora：我现在用的 markdown 编辑器，特点是所见所得，而不是一般编辑器的两栏设计（编辑和预览）。还有就是美观，自从使用了 Mac 后，美观的重要性排到第一了（和实用性并列）。</li>
+  <li>Marboo：五星推荐！之前一直在找带有文档管理功能的 markdown 编辑器，可是一直没有找到好用的，直到前几天在 Mac App Store 找到了 marboo. 这款软件分为普通版和 pro 版，普通版免费，完全能满足需要。marboo 没有编辑器的功能，编辑时会调用系统安装的编辑器。它主要就是用来管理和显示 markdown 文件，显示效果就是本文的显示效果。配合 dropbox 的使用，简直完美！一开始使用起来有点问题，加了QQ群直接询问作者了。总之，推荐你去试试。</li>
+</ol>
 
-<h3 id="atom">Atom</h3>
-<p>Github 出的编辑器，非常好用，插件也足够丰富，已成为日常主力（<a href="https://atom.io/">官网</a>）</p>
-<h3 id="sublime-text-3">Sublime Text 3</h3>
-<p>老牌的编辑器了，处理 BOM 问题的时候会用到（<a href="https://www.sublimetext.com/3">官网</a>）</p>
+<p>综上，最后留在我电脑里的软件是：Typora 和 Marboo</p>
 
-<h3 id="sqlpro-for-sqlite">SQLPro for SQLite</h3>
-<p>sqlite 可视化管理工具（<a href="https://www.sqlitepro.com/">官网</a>）</p>
+<p>接下来测试一下 markdown 显示效果。</p>
+
+<h2 id="语法">语法</h2>
+
+<h3 id="标题一">标题一</h3>
+
+<h4 id="标题二">标题二</h4>
+
+<h5 id="标题三">标题三</h5>
+
+<h3 id="加粗和倾斜">加粗和倾斜</h3>
+
+<p><strong>加粗</strong></p>
+
+<p><em>倾斜</em></p>
+
+<h3 id="无序列表">无序列表</h3>
+
+<ul>
+  <li>苹果</li>
+  <li>香蕉</li>
+  <li>橙子</li>
+</ul>
+
+<h3 id="有序列表">有序列表</h3>
+
+<ol>
+  <li>第一个</li>
+  <li>第二个</li>
+  <li>第三个</li>
+</ol>
+
+<h3 id="代码块">代码块</h3>
+
+<pre><code class="language-Java">public class IPDemo {
+    public static void main(String[] args) throws UnknownHostException {
+        InetAddress address = InetAddress.getLocalHost();
+        System.out.println(address.toString());
+        System.out.println("address "+address.getHostAddress());
+        System.out.println("name "+address.getHostName());
+
+        InetAddress address1 = InetAddress.getByName("www.baidu.com");
+        System.out.println("address "+address1.getHostAddress());
+        System.out.println("name " + address1.getHostName());
+
+        InetAddress[] address2 = InetAddress.getAllByName("www.baidu.com");
+        for (int i = 0; i &lt; address2.length; i++) {
+            System.out.println("address "+i+" "+address2[i].getHostAddress());
+
+            System.out.println("name "+i+" "+address2[i].getHostName());
+        }
+
+    }
+}
+</code></pre>
+
+<h3 id="行内代码块">行内代码块</h3>
+
+<p><code class="highlighter-rouge">html</code> <code class="highlighter-rouge">markdown</code> <code class="highlighter-rouge">我是行内代码块</code></p>
+
+<h3 id="表格">表格</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tables</th>
+      <th style="text-align: center">Are</th>
+      <th style="text-align: right">Cool</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>col 3 is</td>
+      <td style="text-align: center">right-aligned</td>
+      <td style="text-align: right">$1600</td>
+    </tr>
+    <tr>
+      <td>col 2 is</td>
+      <td style="text-align: center">centered</td>
+      <td style="text-align: right">$12</td>
+    </tr>
+    <tr>
+      <td>zebra stripes</td>
+      <td style="text-align: center">are neat</td>
+      <td style="text-align: right">$1</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="引用">引用</h3>
+
+<blockquote>
+  <p>床前明月光</p>
+
+  <p>疑似地上霜</p>
+
+  <p>举头望明月</p>
+
+  <p>低头思故乡</p>
+</blockquote>
+
+<h3 id="链接">链接</h3>
+
+<p><a href="http://www.google.com">Google</a></p>
+
+<h3 id="插入图片">插入图片</h3>
+
+<p><img src="/img/eagle.jpg" alt="Post Sample Image" /></p>
 
 
 
                 <hr>
 
                 <ul class="pager">
-                    
-                    <li class="previous">
-                        <a href="/2015/10/28/android-studio-keymap/" data-toggle="tooltip" data-placement="top" title="Android Studio快捷键">&larr; Previous Post</a>
-                    </li>
                      
                     <li class="next">
-                        <a href="/2016/04/10/android-development-gradle-configuration/" data-toggle="tooltip" data-placement="top" title="Android 开发 Gradle 配置">Next Post &rarr;</a>
+                        <a href="/2017/04/28/android-studio-keymap/" data-toggle="tooltip" data-placement="top" title="Android Studio快捷键">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
