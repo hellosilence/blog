@@ -5,9 +5,9 @@
     <description>You are reading my blog </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 14 Aug 2017 11:38:13 +0800</pubDate>
-    <lastBuildDate>Mon, 14 Aug 2017 11:38:13 +0800</lastBuildDate>
-    <generator>Jekyll v3.4.5</generator>
+    <pubDate>Mon, 04 Dec 2017 13:44:35 +0800</pubDate>
+    <lastBuildDate>Mon, 04 Dec 2017 13:44:35 +0800</lastBuildDate>
+    <generator>Jekyll v3.6.2</generator>
     
       <item>
         <title>Android 开发 Gradle 配置</title>
@@ -113,9 +113,7 @@ android {
     
       <item>
         <title>Android 常用开发工具</title>
-        <description>&lt;h1 id=&quot;android-常用开发工具&quot;&gt;Android 常用开发工具&lt;/h1&gt;
-
-&lt;p&gt;正所谓工欲善其事必先利其器，Android 开发中用到了很多软件（macOS 平台），写下来留个备忘。&lt;/p&gt;
+        <description>&lt;p&gt;正所谓工欲善其事必先利其器，Android 开发中用到了很多软件（macOS 平台），写下来留个备忘。&lt;/p&gt;
 
 &lt;h3 id=&quot;android-studio&quot;&gt;Android Studio&lt;/h3&gt;
 &lt;p&gt;Google 官方指定的开发工具（&lt;a href=&quot;https://developer.android.com/studio/index.html&quot;&gt;官网&lt;/a&gt;）。还在用 Eclipse 的应该大多是由于历史遗留原因，尽快转吧。如果访问不了官方网站，可以试试国内的：&lt;a href=&quot;http://www.android-studio.org/&quot;&gt;Android Studio 中文&lt;/a&gt;&lt;/p&gt;
@@ -154,7 +152,6 @@ android {
 
 &lt;h3 id=&quot;sqlpro-for-sqlite&quot;&gt;SQLPro for SQLite&lt;/h3&gt;
 &lt;p&gt;sqlite 可视化管理工具（&lt;a href=&quot;https://www.sqlitepro.com/&quot;&gt;官网&lt;/a&gt;）&lt;/p&gt;
-
 </description>
         <pubDate>Thu, 01 Jun 2017 20:00:00 +0800</pubDate>
         <link>http://localhost:4000/2017/06/01/android-common-development-tools/</link>
@@ -313,7 +310,7 @@ android {
 
 &lt;h3 id=&quot;资源-id-命名规范&quot;&gt;资源 ID 命名规范&lt;/h3&gt;
 
-&lt;p&gt;（个人习惯）命名模式为：&lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;view_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;view&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;描述&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;xml关联的&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;Activity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;，例如：&lt;/p&gt;
+&lt;p&gt;（个人习惯）命名模式为：&lt;code class=&quot;highlighter-rouge&quot;&gt;{view_name}_{view 描述}_{xml关联的 Activity}&lt;/code&gt;，例如：&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;btn_send_main&lt;/code&gt;&lt;/p&gt;
 
