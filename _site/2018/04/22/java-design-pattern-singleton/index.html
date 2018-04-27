@@ -9,9 +9,9 @@
     <meta name="description" content="You are reading my blog ">
     <link rel="shortcut icon" href="img/favicon.ico">
 
-    <title>Android 常用开发工具 - Samuel's Blog</title>
+    <title>Java设计模式笔记（1）—— 单例模式 - Samuel's Blog</title>
 
-    <link rel="canonical" href="http://localhost:4000/2017/06/01/android-common-development-tools/">
+    <link rel="canonical" href="http://localhost:4000/2018/04/22/java-design-pattern-singleton/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -129,12 +129,13 @@
                 <div class="post-heading">
                     <div class="tags">
                         
-                        <a class="tag" href="/tags/#Android" title="Android">Android</a> 
-                        <a class="tag" href="/tags/#工具" title="工具">工具</a> 
+                        <a class="tag" href="/tags/#设计模式" title="设计模式">设计模式</a> 
+                        <a class="tag" href="/tags/#笔记" title="笔记">笔记</a> 
+                        <a class="tag" href="/tags/#Java" title="Java">Java</a> 
                     </div>
-                    <h1>Android 常用开发工具</h1>  
+                    <h1>Java设计模式笔记（1）—— 单例模式</h1>  
                     <h2 class="subheading"></h2> 
-                    <span class="meta">Posted by Samuel on June 1, 2017</span>
+                    <span class="meta">Posted by Samuel on April 22, 2018</span>
                 </div>
             </div>
         </div>
@@ -147,45 +148,85 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 post-container">
 
-                <p>正所谓工欲善其事必先利其器，Android 开发中用到了很多软件（macOS 平台），写下来留个备忘。</p>
+                <h2 id="定义">定义</h2>
+<p>确保某一个类只有一个实例，而且自行实例化并向这个系统提供这个实例</p>
+<h2 id="使用场景">使用场景</h2>
+<p>确保某个类有且只有一个对象的场景，避免产生多个对象消耗过多的资源，或者某种类型的对象只应该有且只有一个。例如，创建一个对象需要消耗的资源过多，如要访问 IO 和数据库等资源，这时就要考虑使用单例模式了</p>
 
-<h3 id="android-studio">Android Studio</h3>
-<p>Google 官方指定的开发工具（<a href="https://developer.android.com/studio/index.html">官网</a>）。还在用 Eclipse 的应该大多是由于历史遗留原因，尽快转吧。如果访问不了官方网站，可以试试国内的：<a href="http://www.android-studio.org/">Android Studio 中文</a></p>
+<h2 id="uml-类图">UML 类图</h2>
+<p><img src="/img/design-pattern-singleton-uml.png" alt="UML类图" /></p>
+<h2 id="实现">实现</h2>
+<h3 id="懒汉模式">懒汉模式</h3>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Singleton</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="n">Singleton</span> <span class="n">instance</span><span class="o">;</span>
 
-<h3 id="intelij-idea">Intelij IDEA</h3>
-<p>总有要单独写点 Java 程序的时候（<a href="https://www.jetbrains.com/idea/">官网</a>），Intellij IDEA 更好用。实际上 Android Studio 就是基于 Intellij IDEA 的。JetBrains 出的几款编辑器都非常好用。</p>
+    <span class="kd">private</span> <span class="nf">Singleton</span><span class="o">()</span> <span class="o">{</span>
+    <span class="o">}</span>
 
-<h3 id="genymotion">Genymotion</h3>
-<p>最快的安卓虚拟机，需要下载 VirtualBox。个人版免费（<a href="https://www.genymotion.com/">官网</a>）</p>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kd">synchronized</span> <span class="n">Singleton</span> <span class="nf">getInstance</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">instance</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">instance</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Singleton</span><span class="o">();</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="n">instance</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
-<h3 id="android-file-transfer">Android File Transfer</h3>
-<p>官方的文件传输工具，连接手机和电脑（<a href="https://www.android.com/filetransfer/">官网</a>）</p>
+<ul>
+  <li>优点：在使用时才会被实例化，节约资源</li>
+  <li>缺点：第一次加载时需要进行实例化，反应稍慢，最大的问题是每次调用 getInstance 都进行同步，造成不必要的同步开销</li>
+</ul>
 
-<h3 id="handshaker">HandShaker</h3>
-<p>锤子出品的文件传输和管理工具，更直观好用（<a href="https://itunes.apple.com/us/app/handshaker-manage-your-android-phones-at-ease/id1012930195?mt=12">Mac App Store链接</a>）</p>
+<h3 id="double-check-lockdcl实现单例">Double Check Lock(DCL)实现单例</h3>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Singleton</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="n">Singleton</span> <span class="n">mInstance</span><span class="o">;</span>
 
-<h3 id="sourcetree">SourceTree</h3>
-<p>简单易用的版本控制工具（<a href="https://www.sourcetreeapp.com/">官网</a>）</p>
+    <span class="kd">private</span> <span class="nf">Singleton</span><span class="o">()</span> <span class="o">{</span>
+    <span class="o">}</span>
 
-<h3 id="postman">Postman</h3>
-<p>接口调试，可下载 Chrome 插件或本地客户端（<a href="https://www.getpostman.com/">官网</a>）</p>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="n">Singleton</span> <span class="nf">getInstance</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">mInstance</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+            <span class="kd">synchronized</span> <span class="o">(</span><span class="n">Singleton</span><span class="o">.</span><span class="na">class</span><span class="o">)</span> <span class="o">{</span>
+                <span class="k">if</span> <span class="o">(</span><span class="n">mInstance</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+                    <span class="n">mInstance</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Singleton</span><span class="o">();</span>
+                <span class="o">}</span>
+            <span class="o">}</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="n">mInstance</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
-<h3 id="androidtool">AndroidTool</h3>
-<p>方便截图和录屏（<a href="https://github.com/mortenjust/androidtool-mac">Github 地址</a>）</p>
+<ul>
+  <li>优点：第一次执行 getInstance 单例对象才会被实例化，效率高</li>
+  <li>缺点：第一次加载时反应稍慢，也由于 Java 内存模型的原因偶尔会失败</li>
+</ul>
 
-<h3 id="vysor">Vysor</h3>
-<p>Chrome 插件，可以把真机投影到电脑上（<a href="https://chrome.google.com/webstore/detail/vysor/gidgenkbbabolejbgbpnhbimgjbffefm">Chrome 商店地址</a>）</p>
+<h3 id="静态内部类">静态内部类</h3>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Singleton</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="nf">Singleton</span><span class="o">()</span> <span class="o">{</span>
+    <span class="o">}</span>
 
-<h3 id="airmirror">AirMirror</h3>
-<p>投影真机到电脑上，需要配合 AirDroid 使用（<a href="https://chrome.google.com/webstore/detail/airmirror/macmgoeeggnlnmpiojbcniblabkdjphe">Chrome 商店地址</a>）</p>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="n">Singleton</span> <span class="nf">getInstance</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">SingletonHolder</span><span class="o">.</span><span class="na">sInstance</span><span class="o">;</span>
+    <span class="o">}</span>
 
-<h3 id="atom">Atom</h3>
-<p>Github 出的编辑器，非常好用，插件也足够丰富，已成为日常主力（<a href="https://atom.io/">官网</a>）</p>
-<h3 id="sublime-text-3">Sublime Text 3</h3>
-<p>老牌的编辑器了，处理 BOM 问题的时候会用到（<a href="https://www.sublimetext.com/3">官网</a>）</p>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">SingletonHolder</span> <span class="o">{</span>
+        <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">Singleton</span> <span class="n">sInstance</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Singleton</span><span class="o">();</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
-<h3 id="sqlpro-for-sqlite">SQLPro for SQLite</h3>
-<p>sqlite 可视化管理工具（<a href="https://www.sqlitepro.com/">官网</a>）</p>
+<ul>
+  <li>既能确保线程安全，也能保证单例对象的唯一性</li>
+</ul>
+
+<h3 id="其他">其他</h3>
+<ul>
+  <li>枚举单例</li>
+  <li>使用容器实现单例</li>
+</ul>
+
 
 
                 <hr>
@@ -193,13 +234,9 @@
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/2017/05/03/android-code-guideline/" data-toggle="tooltip" data-placement="top" title="Android 代码命名规范">&larr; Previous Post</a>
+                        <a href="/2017/12/04/macOS-crontab-configuration/" data-toggle="tooltip" data-placement="top" title="macOS crontab 定时任务配置">&larr; Previous Post</a>
                     </li>
                      
-                    <li class="next">
-                        <a href="/2017/06/10/android-development-gradle-configuration/" data-toggle="tooltip" data-placement="top" title="Android 开发 Gradle 配置">Next Post &rarr;</a>
-                    </li>
-                    
                 </ul>
 
 

@@ -9,9 +9,9 @@
     <meta name="description" content="You are reading my blog ">
     <link rel="shortcut icon" href="img/favicon.ico">
 
-    <title>Android 常用开发工具 - Samuel's Blog</title>
+    <title>macOS crontab 定时任务配置 - Samuel's Blog</title>
 
-    <link rel="canonical" href="http://localhost:4000/2017/06/01/android-common-development-tools/">
+    <link rel="canonical" href="http://localhost:4000/2017/12/04/macOS-crontab-configuration/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -129,12 +129,12 @@
                 <div class="post-heading">
                     <div class="tags">
                         
-                        <a class="tag" href="/tags/#Android" title="Android">Android</a> 
-                        <a class="tag" href="/tags/#工具" title="工具">工具</a> 
+                        <a class="tag" href="/tags/#macOS" title="macOS">macOS</a> 
+                        <a class="tag" href="/tags/#linux" title="linux">linux</a> 
                     </div>
-                    <h1>Android 常用开发工具</h1>  
+                    <h1>macOS crontab 定时任务配置</h1>  
                     <h2 class="subheading"></h2> 
-                    <span class="meta">Posted by Samuel on June 1, 2017</span>
+                    <span class="meta">Posted by Samuel on December 4, 2017</span>
                 </div>
             </div>
         </div>
@@ -147,45 +147,170 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 post-container">
 
-                <p>正所谓工欲善其事必先利其器，Android 开发中用到了很多软件（macOS 平台），写下来留个备忘。</p>
+                <h2 id="开启-crontab">开启 crontab</h2>
+<ul>
+  <li>
+    <p>查看 crontab 是否启动</p>
 
-<h3 id="android-studio">Android Studio</h3>
-<p>Google 官方指定的开发工具（<a href="https://developer.android.com/studio/index.html">官网</a>）。还在用 Eclipse 的应该大多是由于历史遗留原因，尽快转吧。如果访问不了官方网站，可以试试国内的：<a href="http://www.android-studio.org/">Android Studio 中文</a></p>
+    <p><code class="highlighter-rouge">sudo launchctl list | grep cron</code></p>
+  </li>
+  <li>
+    <p>检查需要的文件</p>
 
-<h3 id="intelij-idea">Intelij IDEA</h3>
-<p>总有要单独写点 Java 程序的时候（<a href="https://www.jetbrains.com/idea/">官网</a>），Intellij IDEA 更好用。实际上 Android Studio 就是基于 Intellij IDEA 的。JetBrains 出的几款编辑器都非常好用。</p>
+    <p><code class="highlighter-rouge">ls -al /etc/crontab</code></p>
+  </li>
+  <li>
+    <p>如果 crontab 文件不存在则创建</p>
 
-<h3 id="genymotion">Genymotion</h3>
-<p>最快的安卓虚拟机，需要下载 VirtualBox。个人版免费（<a href="https://www.genymotion.com/">官网</a>）</p>
+    <p><code class="highlighter-rouge">sudo touch /etc/crontab</code></p>
+  </li>
+</ul>
 
-<h3 id="android-file-transfer">Android File Transfer</h3>
-<p>官方的文件传输工具，连接手机和电脑（<a href="https://www.android.com/filetransfer/">官网</a>）</p>
+<h2 id="crontab-命令参数">crontab 命令参数</h2>
+<ul>
+  <li>-u user：用来设定某个用户的crontab服务；</li>
+  <li>file：file是命令文件的名字,表示将file做为crontab的任务列表文件并载入crontab。如果在命令行中没有指定这个文件，crontab命令将接受标准输入（键盘）上键入的命令，并将它们载入crontab。</li>
+  <li>-e：编辑某个用户的crontab文件内容。如果不指定用户，则表示编辑当前用户的crontab文件。</li>
+  <li>-l：显示某个用户的crontab文件内容，如果不指定用户，则表示显示当前用户的crontab文件内容。</li>
+  <li>-r：从/var/spool/cron目录中删除某个用户的crontab文件，如果不指定用户，则默认删除当前用户的crontab文件。</li>
+  <li>-i：在删除用户的crontab文件时给确认提示。</li>
+</ul>
 
-<h3 id="handshaker">HandShaker</h3>
-<p>锤子出品的文件传输和管理工具，更直观好用（<a href="https://itunes.apple.com/us/app/handshaker-manage-your-android-phones-at-ease/id1012930195?mt=12">Mac App Store链接</a>）</p>
+<blockquote>
+  <p>在使用crontab执行脚本时，如果没有执行任务，请查看crontab和脚本是否开启执行权限</p>
 
-<h3 id="sourcetree">SourceTree</h3>
-<p>简单易用的版本控制工具（<a href="https://www.sourcetreeapp.com/">官网</a>）</p>
+  <p>eg: */1 * * * * /bin/date » /User/Username(你的用户名)/time.txt表示每分钟输出当前时间到time.txt上</p>
 
-<h3 id="postman">Postman</h3>
-<p>接口调试，可下载 Chrome 插件或本地客户端（<a href="https://www.getpostman.com/">官网</a>）</p>
+</blockquote>
 
-<h3 id="androidtool">AndroidTool</h3>
-<p>方便截图和录屏（<a href="https://github.com/mortenjust/androidtool-mac">Github 地址</a>）</p>
+<p>如果出现以下问题</p>
 
-<h3 id="vysor">Vysor</h3>
-<p>Chrome 插件，可以把真机投影到电脑上（<a href="https://chrome.google.com/webstore/detail/vysor/gidgenkbbabolejbgbpnhbimgjbffefm">Chrome 商店地址</a>）</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[hayek@mac:/www/] 02:33:22 PM: crontab -e
+crontab: no crontab for hayek - using an empty one
+crontab: "/usr/bin/vi" exited with status 1
+</code></pre></div></div>
 
-<h3 id="airmirror">AirMirror</h3>
-<p>投影真机到电脑上，需要配合 AirDroid 使用（<a href="https://chrome.google.com/webstore/detail/airmirror/macmgoeeggnlnmpiojbcniblabkdjphe">Chrome 商店地址</a>）</p>
+<ol>
+  <li>方法1：<code class="highlighter-rouge">EDITOR=vim crontab -e</code> 直接编辑，以后直接<code class="highlighter-rouge">crontab -e</code>直接打开就行。</li>
+  <li>方法2：export EDITOR=vim</li>
+  <li>方法3：向cron进程提交一个crontab文件之前，首先要设置环境变量EDITOR。cron进程根据它来确定使用哪个编辑器编辑crontab文件。9 9 %的UNIX和LINUX用户都使用vi，如果你也是这样，那么你就编辑$HOME目录下的. profile文件，在其中加入这样一行:<code class="highlighter-rouge">EDITOR=vi; export EDITOR</code></li>
+</ol>
 
-<h3 id="atom">Atom</h3>
-<p>Github 出的编辑器，非常好用，插件也足够丰富，已成为日常主力（<a href="https://atom.io/">官网</a>）</p>
-<h3 id="sublime-text-3">Sublime Text 3</h3>
-<p>老牌的编辑器了，处理 BOM 问题的时候会用到（<a href="https://www.sublimetext.com/3">官网</a>）</p>
+<h2 id="crontab的文件格式">crontab的文件格式</h2>
+<ul>
+  <li>第1列：分钟，0～59</li>
+  <li>第2列：小时，0～23（0表示子夜）</li>
+  <li>第3列：日期，1～31</li>
+  <li>第4列：月份，1～12</li>
+  <li>第5列：星期，0～7（0和7表示星期天）</li>
+  <li>第6列：要运行的命令（如果有多个命令用 &amp;&amp; 隔开）</li>
+</ul>
 
-<h3 id="sqlpro-for-sqlite">SQLPro for SQLite</h3>
-<p>sqlite 可视化管理工具（<a href="https://www.sqlitepro.com/">官网</a>）</p>
+<h3 id="特殊字符">特殊字符</h3>
+
+<ul>
+  <li>星号（*）：代表所有可能的值，例如month字段如果是星号，则表示在满足其它字段的制约条件后每月都执行该命令操作。</li>
+  <li>逗号（,）：可以用逗号隔开的值指定一个列表范围，例如，“1,2,5,7,8,9”</li>
+  <li>中杠（-）：可以用整数之间的中杠表示一个整数范围，例如“2-6”表示“2,3,4,5,6”</li>
+  <li>正斜线（/）：可以用正斜线指定时间的间隔频率，例如“0-23/2”表示每两小时执行一次。同时正斜线可以和星号一起使用，例如*/10，如果用在minute字段，表示每十分钟执行一次。</li>
+</ul>
+
+<h3 id="实例">实例</h3>
+<ol>
+  <li>
+    <p>每1分钟执行一次</p>
+
+    <p>*/1 * * * *</p>
+  </li>
+  <li>
+    <p>每小时的第3和第15分钟执行</p>
+
+    <p>3,15 * * * *</p>
+  </li>
+  <li>
+    <p>每隔两天的上午8点到11点的第3和第15分钟执行</p>
+
+    <p>3,15 8-11 */2 * *</p>
+  </li>
+  <li>
+    <p>每个星期一的上午8点到11点的第3和第15分钟执行</p>
+
+    <p>3,15 8-11 * * 1</p>
+  </li>
+</ol>
+
+<h2 id="备份恢复-crontab">备份/恢复 crontab</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>备份
+crontab -l &gt; $HOME/.mycron
+恢复
+crontab $HOME/.mycron
+</code></pre></div></div>
+
+<h2 id="crontab服务的重启关闭开启">crontab服务的重启关闭，开启</h2>
+
+<ul>
+  <li>
+    <p>mac系统下</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  sudo /usr/sbin/cron start
+  sudo /usr/sbin/cron restart
+  sudo /usr/sbin/cron stop
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>ubuntu:</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  sudo /etc/init.d/cron start
+  sudo /etc/init.d/cron stop
+  sudo /etc/init.d/cron restart
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="日志">日志</h2>
+<ul>
+  <li>
+    <p>默认</p>
+
+    <p>不做任何处理，日志会发送到/var/mail/Username</p>
+  </li>
+  <li>
+    <p>重定向</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  * * * * * command &gt;&gt; /Users/Samuel/Desktop/command.log 2&gt;&amp;1
+</code></pre></div>    </div>
+    <p>2&gt;&amp;1 表示把标准错误输出重定向到与标准输出一致，即command.log</p>
+  </li>
+  <li>
+    <p>月份重命名</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  0 12 * * * command &gt;&gt; "/Users/Samuel/Desktop/$(date +"\%Y-\%m").log" 2&gt;&amp;1
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>星期重命名</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  0 12 * * * command &gt;&gt; "/Users/Samuel/Desktop/$(date +"\%Y-W\%W").log" 2&gt;&amp;1
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>小时重命名</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  0 12 * * * command &gt;&gt; "/Users/Samuel/Desktop/$(date +"\%Y-\%m-\%d_\%H").log" 2&gt;&amp;1
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="其他">其他</h2>
+<ul>
+  <li>环境变量问题，尽量使用绝对路径</li>
+  <li>
+    <p>python编码问题</p>
+
+    <p><code class="highlighter-rouge">export LANG=zh_CN.UTF-8</code></p>
+  </li>
+</ul>
 
 
                 <hr>
@@ -193,11 +318,11 @@
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/2017/05/03/android-code-guideline/" data-toggle="tooltip" data-placement="top" title="Android 代码命名规范">&larr; Previous Post</a>
+                        <a href="/2017/06/10/android-development-gradle-configuration/" data-toggle="tooltip" data-placement="top" title="Android 开发 Gradle 配置">&larr; Previous Post</a>
                     </li>
                      
                     <li class="next">
-                        <a href="/2017/06/10/android-development-gradle-configuration/" data-toggle="tooltip" data-placement="top" title="Android 开发 Gradle 配置">Next Post &rarr;</a>
+                        <a href="/2018/04/22/java-design-pattern-singleton/" data-toggle="tooltip" data-placement="top" title="Java设计模式笔记（1）—— 单例模式">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
