@@ -11,7 +11,7 @@
 
     <title>Java设计模式笔记（1）—— 单例模式 - Samuel's Blog</title>
 
-    <link rel="canonical" href="http://localhost:4000/2018/04/22/java-design-pattern-singleton/">
+    <link rel="canonical" href="http://localhost:4000/2018/09/02/java-design-pattern-singleton/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -135,7 +135,7 @@
                     </div>
                     <h1>Java设计模式笔记（1）—— 单例模式</h1>  
                     <h2 class="subheading"></h2> 
-                    <span class="meta">Posted by Samuel on April 22, 2018</span>
+                    <span class="meta">Posted by Samuel on September 2, 2018</span>
                 </div>
             </div>
         </div>
@@ -155,9 +155,12 @@
 
 <h2 id="uml-类图">UML 类图</h2>
 <p><img src="/img/design-pattern-singleton-uml.png" alt="UML类图" /></p>
+
 <h2 id="实现">实现</h2>
 <h3 id="懒汉模式">懒汉模式</h3>
-<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Singleton</span> <span class="o">{</span>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Singleton</span> <span class="o">{</span>
     <span class="kd">private</span> <span class="kd">static</span> <span class="n">Singleton</span> <span class="n">instance</span><span class="o">;</span>
 
     <span class="kd">private</span> <span class="nf">Singleton</span><span class="o">()</span> <span class="o">{</span>
@@ -237,6 +240,10 @@
                         <a href="/2017/12/04/macOS-crontab-configuration/" data-toggle="tooltip" data-placement="top" title="macOS crontab 定时任务配置">&larr; Previous Post</a>
                     </li>
                      
+                    <li class="next">
+                        <a href="/2018/09/03/java-design-pattern-builder/" data-toggle="tooltip" data-placement="top" title="Java设计模式笔记（2）—— Builder模式">Next Post &rarr;</a>
+                    </li>
+                    
                 </ul>
 
 

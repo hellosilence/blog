@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Java设计模式笔记（1）—— 单例模式"
-date:       2018-04-22 12:00:00
+date:       2018-09-02 12:00:00
 author:     "Samuel"
 tags:
     - 设计模式
@@ -17,9 +17,12 @@ tags:
 
 ## UML 类图
 <img src="{{ site.baseurl }}/img/design-pattern-singleton-uml.png" alt="UML类图">
+
 ## 实现
 ### 懒汉模式
+
 ```java
+
 public class Singleton {
     private static Singleton instance;
 
