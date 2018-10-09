@@ -1,7 +1,7 @@
-#Samuel's Blog
+# Samuel's Blog
 
 
-##Thanks
+## Thanks
 The theme is forked from [huxpro.github.io](https://github.com/Huxpro/huxpro.github.io)
 
 And the links below give me a lot of help.Thanks for their beautiful codes.
