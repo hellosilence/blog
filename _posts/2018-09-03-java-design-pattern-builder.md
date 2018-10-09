@@ -5,7 +5,6 @@ date:       2018-09-03 12:00:00
 author:     "Samuel"
 tags:
     - 设计模式
-    - 笔记
     - Java
 ---
 
@@ -115,7 +114,7 @@ public class TestBuilderPattern {
 1. 良好的封装性，使用建造者模式可以使客户端不必知道产品内部组成的细节
 2. 建造者独立，容易扩展
 
-+ 确定
++ 缺点
 1. 会产生多余的Builder对象以及Director对象
 
 
